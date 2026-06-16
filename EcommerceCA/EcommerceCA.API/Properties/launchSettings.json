@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "EcommerceCA.API": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:53638;http://localhost:53639"
+    }
+  }
+}

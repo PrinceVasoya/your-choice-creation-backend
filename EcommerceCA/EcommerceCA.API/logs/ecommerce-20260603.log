@@ -1,0 +1,9 @@
+2026-06-03 20:22:33.251 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 17.5309 ms
+2026-06-03 20:22:33.340 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 0.4306 ms
+2026-06-03 20:22:33.403 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 173.5592 ms
+2026-06-03 20:22:33.513 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 6.4119 ms
+2026-06-03 20:22:33.582 +05:30 [INF] HTTP GET /api/products responded 200 in 67.7363 ms
+2026-06-03 20:22:33.772 +05:30 [INF] HTTP GET /api/products responded 200 in 59.0785 ms
+2026-06-03 20:22:34.130 +05:30 [INF] HTTP GET /uploads/products/84ff6684-4de0-44b4-ad69-253d9a308aa5.png responded 304 in 19.8541 ms
+2026-06-03 20:22:34.130 +05:30 [INF] HTTP GET /uploads/products/8b7bdc12-a3f4-472f-85a1-d75258ea9af1.png responded 304 in 27.2322 ms
+2026-06-03 20:22:34.130 +05:30 [INF] HTTP GET /uploads/products/e0b2dba1-4ae0-406c-b963-b6c22c7f050a.png responded 304 in 29.5599 ms

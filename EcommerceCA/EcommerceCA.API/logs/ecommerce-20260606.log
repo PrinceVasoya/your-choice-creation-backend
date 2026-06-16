@@ -1,0 +1,776 @@
+2026-06-06 10:21:04.424 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 10:21:08.303 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 10:30:03.152 +05:30 [INF] HTTP POST /api/payment/create-order responded 400 in 1659.3415 ms
+2026-06-06 10:36:11.708 +05:30 [INF] HTTP POST /api/payment/create-order responded 307 in 5.2507 ms
+2026-06-06 10:39:26.713 +05:30 [ERR] HTTP POST /api/payment/create-order responded 500 in 3786.2605 ms
+Razorpay.Api.Errors.BadRequestError: Authentication failed
+   at Razorpay.Api.RestClient.HandleErrors(HttpWebResponse webResponse, String response, String host)
+   at Razorpay.Api.RestClient.createResponse(HttpWebRequest request, String host)
+   at Razorpay.Api.RestClient.createResponse(HttpWebRequest request, String host)
+   at Razorpay.Api.RestClient.MakeRequest(String relativeUrl, HttpMethod method, String data, String host)
+   at Razorpay.Api.Entity.Request(String relativeUrl, HttpMethod verb, Dictionary`2 options, String host)
+   at Razorpay.Api.Entity.Request(String relativeUrl, HttpMethod verb, Dictionary`2 options)
+   at Razorpay.Api.Order.Create(Dictionary`2 data)
+   at EcommerceCA.Application.Services.PaymentService.CreateRazorpayOrderAsync(Int32 orderId) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\Services\PaymentService.cs:line 109
+   at EcommerceCA.API.Controllers.PaymentController.CreateOrderLegacy(CreateRazorpayOrderRequest request) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.API\Controllers\PaymentController.cs:line 136
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-06 10:39:26.771 +05:30 [ERR] Unhandled exception [POST] /api/payment/create-order — Authentication failed
+Razorpay.Api.Errors.BadRequestError: Authentication failed
+   at Razorpay.Api.RestClient.HandleErrors(HttpWebResponse webResponse, String response, String host)
+   at Razorpay.Api.RestClient.createResponse(HttpWebRequest request, String host)
+   at Razorpay.Api.RestClient.createResponse(HttpWebRequest request, String host)
+   at Razorpay.Api.RestClient.MakeRequest(String relativeUrl, HttpMethod method, String data, String host)
+   at Razorpay.Api.Entity.Request(String relativeUrl, HttpMethod verb, Dictionary`2 options, String host)
+   at Razorpay.Api.Entity.Request(String relativeUrl, HttpMethod verb, Dictionary`2 options)
+   at Razorpay.Api.Order.Create(Dictionary`2 data)
+   at EcommerceCA.Application.Services.PaymentService.CreateRazorpayOrderAsync(Int32 orderId) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\Services\PaymentService.cs:line 109
+   at EcommerceCA.API.Controllers.PaymentController.CreateOrderLegacy(CreateRazorpayOrderRequest request) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.API\Controllers\PaymentController.cs:line 136
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at EcommerceCA.API.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.API\Middleware\ExceptionMiddleware.cs:line 31
+2026-06-06 10:39:55.913 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 10:39:57.329 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 10:40:27.123 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 739.0684 ms
+2026-06-06 10:40:30.402 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 132.0519 ms
+2026-06-06 10:47:03.135 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 10:47:04.581 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 10:50:16.890 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-06 10:50:16.880 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 246.0390 ms
+2026-06-06 10:50:16.968 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 11.0156 ms
+2026-06-06 10:50:16.968 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 10.8770 ms
+2026-06-06 10:50:17.000 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 4.1411 ms
+2026-06-06 10:50:17.401 +05:30 [INF] HTTP GET /api/categories responded 200 in 768.5097 ms
+2026-06-06 10:50:17.543 +05:30 [INF] HTTP GET /api/categories responded 200 in 130.4532 ms
+2026-06-06 10:50:18.247 +05:30 [INF] HTTP GET /api/products responded 200 in 513.3351 ms
+2026-06-06 10:50:18.638 +05:30 [INF] HTTP GET /api/products responded 200 in 45.3772 ms
+2026-06-06 10:50:34.830 +05:30 [INF] HTTP GET /api/products responded 200 in 68.0638 ms
+2026-06-06 10:50:34.983 +05:30 [INF] HTTP GET /api/orders responded 401 in 1.3036 ms
+2026-06-06 10:50:35.055 +05:30 [INF] HTTP GET /api/orders responded 401 in 0.9095 ms
+2026-06-06 10:50:35.093 +05:30 [INF] HTTP GET /api/products responded 200 in 40.5244 ms
+2026-06-06 10:52:19.930 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 1039.2618 ms
+2026-06-06 10:52:20.174 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 114.5923 ms
+2026-06-06 10:52:20.562 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 50.8703 ms
+2026-06-06 10:52:21.143 +05:30 [INF] HTTP GET /api/products responded 200 in 59.3865 ms
+2026-06-06 10:52:21.593 +05:30 [INF] HTTP GET /api/products responded 200 in 93.8489 ms
+2026-06-06 10:52:22.025 +05:30 [INF] HTTP GET /api/orders responded 200 in 626.1842 ms
+2026-06-06 10:52:22.419 +05:30 [INF] HTTP GET /api/orders responded 200 in 76.1816 ms
+2026-06-06 10:52:48.171 +05:30 [INF] HTTP GET /api/orders responded 200 in 60.9680 ms
+2026-06-06 10:52:48.192 +05:30 [INF] HTTP GET /api/orders responded 200 in 11.4610 ms
+2026-06-06 10:52:48.199 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 76.9196 ms
+2026-06-06 10:52:48.200 +05:30 [INF] HTTP GET /api/products responded 200 in 95.4592 ms
+2026-06-06 10:52:48.238 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 11.6395 ms
+2026-06-06 10:52:48.241 +05:30 [INF] HTTP GET /api/products responded 200 in 19.6480 ms
+2026-06-06 10:52:48.722 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 7.9973 ms
+2026-06-06 10:52:48.985 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 16.7722 ms
+2026-06-06 10:52:58.055 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 26.4251 ms
+2026-06-06 10:52:58.083 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 6.6904 ms
+2026-06-06 10:52:58.160 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.8463 ms
+2026-06-06 10:52:58.193 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 7.6826 ms
+2026-06-06 10:55:09.632 +05:30 [INF] HTTP POST /api/auth/register responded 201 in 781.6185 ms
+2026-06-06 10:55:09.772 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 15.5287 ms
+2026-06-06 10:55:10.154 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 5.5832 ms
+2026-06-06 10:55:11.711 +05:30 [INF] HTTP GET /api/categories responded 200 in 90.1876 ms
+2026-06-06 10:55:12.087 +05:30 [INF] HTTP GET /api/categories responded 200 in 39.8888 ms
+2026-06-06 10:55:12.356 +05:30 [INF] HTTP GET /api/products responded 200 in 93.5924 ms
+2026-06-06 10:55:12.603 +05:30 [INF] HTTP GET /api/products responded 200 in 73.6889 ms
+2026-06-06 10:55:29.584 +05:30 [INF] HTTP GET /api/categories responded 200 in 32.8321 ms
+2026-06-06 10:55:29.639 +05:30 [INF] HTTP GET /api/categories responded 200 in 21.3147 ms
+2026-06-06 10:55:30.078 +05:30 [INF] HTTP GET /api/products responded 200 in 58.9354 ms
+2026-06-06 10:55:30.317 +05:30 [INF] HTTP GET /api/products responded 200 in 29.5362 ms
+2026-06-06 10:55:39.232 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 166.9783 ms
+2026-06-06 10:55:39.558 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 4.1470 ms
+2026-06-06 10:55:39.584 +05:30 [INF] HTTP GET /api/products responded 200 in 10.1341 ms
+2026-06-06 10:55:39.820 +05:30 [INF] HTTP GET /api/products responded 200 in 3.8412 ms
+2026-06-06 10:56:05.421 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 35.1558 ms
+2026-06-06 10:56:05.751 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 2.9768 ms
+2026-06-06 10:57:45.125 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 177.6000 ms
+2026-06-06 10:58:32.968 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 69.6569 ms
+2026-06-06 10:58:33.310 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 3.2028 ms
+2026-06-06 10:58:54.896 +05:30 [INF] HTTP GET /api/categories responded 200 in 44.9193 ms
+2026-06-06 10:58:55.297 +05:30 [INF] HTTP GET /api/categories responded 200 in 33.1803 ms
+2026-06-06 10:58:55.399 +05:30 [INF] HTTP GET /api/products responded 200 in 81.0573 ms
+2026-06-06 10:58:55.557 +05:30 [INF] HTTP GET /api/products responded 200 in 35.3741 ms
+2026-06-06 10:59:08.389 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 42.8113 ms
+2026-06-06 10:59:08.779 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 32.8127 ms
+2026-06-06 10:59:08.860 +05:30 [INF] HTTP GET /api/products responded 200 in 58.4297 ms
+2026-06-06 10:59:09.029 +05:30 [INF] HTTP GET /api/products responded 200 in 56.3553 ms
+2026-06-06 10:59:28.670 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 55.8434 ms
+2026-06-06 10:59:29.017 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 5.7333 ms
+2026-06-06 11:00:56.466 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 47.8947 ms
+2026-06-06 11:01:42.071 +05:30 [INF] HTTP GET /api/categories responded 200 in 27.3226 ms
+2026-06-06 11:01:42.109 +05:30 [INF] HTTP GET /api/categories responded 200 in 6.0108 ms
+2026-06-06 11:01:42.602 +05:30 [INF] HTTP GET /api/products responded 200 in 37.0683 ms
+2026-06-06 11:01:42.820 +05:30 [INF] HTTP GET /api/products responded 200 in 5.5587 ms
+2026-06-06 11:02:01.572 +05:30 [INF] HTTP GET /api/products/3 responded 200 in 24.0701 ms
+2026-06-06 11:02:01.614 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 53.4785 ms
+2026-06-06 11:02:01.620 +05:30 [INF] HTTP GET /api/products/3 responded 200 in 6.1984 ms
+2026-06-06 11:02:01.655 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 15.3635 ms
+2026-06-06 11:02:01.840 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 4.0858 ms
+2026-06-06 11:02:01.873 +05:30 [INF] HTTP GET /api/products responded 200 in 40.5420 ms
+2026-06-06 11:02:02.206 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 5.4979 ms
+2026-06-06 11:02:02.220 +05:30 [INF] HTTP GET /api/products responded 200 in 5.6804 ms
+2026-06-06 11:02:12.054 +05:30 [INF] HTTP GET /api/products/1 responded 200 in 4.7713 ms
+2026-06-06 11:02:12.070 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 4.4101 ms
+2026-06-06 11:02:12.123 +05:30 [INF] HTTP GET /api/products/1 responded 200 in 3.9558 ms
+2026-06-06 11:02:12.136 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 7.1414 ms
+2026-06-06 11:02:12.267 +05:30 [INF] HTTP GET /api/products responded 200 in 13.6279 ms
+2026-06-06 11:02:12.272 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 6.3835 ms
+2026-06-06 11:02:12.771 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.1912 ms
+2026-06-06 11:02:12.774 +05:30 [INF] HTTP GET /api/products responded 200 in 7.8888 ms
+2026-06-06 11:02:29.250 +05:30 [INF] HTTP GET /api/products/3 responded 200 in 5.8162 ms
+2026-06-06 11:02:29.317 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 27.3054 ms
+2026-06-06 11:02:29.366 +05:30 [INF] HTTP GET /api/products/3 responded 200 in 3.7074 ms
+2026-06-06 11:02:29.433 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 6.9726 ms
+2026-06-06 11:02:29.584 +05:30 [INF] HTTP GET /api/products responded 200 in 14.3583 ms
+2026-06-06 11:02:29.590 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 9.7377 ms
+2026-06-06 11:02:29.982 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 8.5339 ms
+2026-06-06 11:02:29.994 +05:30 [INF] HTTP GET /api/products responded 200 in 12.9696 ms
+2026-06-06 11:02:52.438 +05:30 [INF] HTTP GET /api/products/3 responded 200 in 6.5461 ms
+2026-06-06 11:02:52.763 +05:30 [INF] HTTP GET /api/products/3 responded 200 in 6.5225 ms
+2026-06-06 11:04:35.694 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 168.8779 ms
+2026-06-06 11:05:41.689 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 25.8929 ms
+2026-06-06 11:05:41.696 +05:30 [INF] HTTP GET /api/products/2 responded 200 in 65.6414 ms
+2026-06-06 11:05:41.735 +05:30 [INF] HTTP GET /api/products/2 responded 200 in 8.2449 ms
+2026-06-06 11:05:41.745 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 7.3003 ms
+2026-06-06 11:05:42.001 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 11.1412 ms
+2026-06-06 11:05:42.055 +05:30 [INF] HTTP GET /api/products responded 200 in 53.9527 ms
+2026-06-06 11:05:42.341 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 4.8852 ms
+2026-06-06 11:05:42.407 +05:30 [INF] HTTP GET /api/products responded 200 in 14.3739 ms
+2026-06-06 11:05:49.488 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 11.2615 ms
+2026-06-06 11:05:49.490 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 5.7966 ms
+2026-06-06 11:05:49.530 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 5.7078 ms
+2026-06-06 11:05:49.558 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 6.3790 ms
+2026-06-06 11:05:49.825 +05:30 [INF] HTTP GET /api/products responded 200 in 9.6143 ms
+2026-06-06 11:05:49.828 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 10.4267 ms
+2026-06-06 11:05:50.150 +05:30 [INF] HTTP GET /api/products responded 200 in 17.7121 ms
+2026-06-06 11:05:50.176 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 7.6380 ms
+2026-06-06 11:06:07.738 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 2.9661 ms
+2026-06-06 11:06:07.755 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 3.2606 ms
+2026-06-06 11:06:07.802 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 1.5340 ms
+2026-06-06 11:06:07.813 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.0366 ms
+2026-06-06 11:06:19.077 +05:30 [INF] HTTP GET /api/categories responded 200 in 67.6435 ms
+2026-06-06 11:06:19.533 +05:30 [INF] HTTP GET /api/categories responded 200 in 43.4854 ms
+2026-06-06 11:06:19.677 +05:30 [INF] HTTP GET /api/products responded 200 in 64.8268 ms
+2026-06-06 11:06:19.925 +05:30 [INF] HTTP GET /api/products responded 200 in 50.3626 ms
+2026-06-06 11:06:30.520 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 31.5206 ms
+2026-06-06 11:06:30.705 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 10.0428 ms
+2026-06-06 11:06:30.934 +05:30 [INF] HTTP GET /api/products responded 200 in 86.3196 ms
+2026-06-06 11:06:31.156 +05:30 [INF] HTTP GET /api/products responded 200 in 21.3172 ms
+2026-06-06 11:06:55.766 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 39.1576 ms
+2026-06-06 11:06:56.097 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 3.1512 ms
+2026-06-06 11:08:37.224 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 80.7273 ms
+2026-06-06 11:09:13.620 +05:30 [INF] HTTP GET /api/products/5 responded 200 in 58.7597 ms
+2026-06-06 11:09:13.656 +05:30 [INF] HTTP GET /api/products/5 responded 200 in 7.2100 ms
+2026-06-06 11:09:13.697 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 91.5997 ms
+2026-06-06 11:09:13.719 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 3.7945 ms
+2026-06-06 11:09:14.140 +05:30 [INF] HTTP GET /api/products responded 200 in 34.8358 ms
+2026-06-06 11:09:14.142 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.3908 ms
+2026-06-06 11:09:14.496 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.2940 ms
+2026-06-06 11:09:14.497 +05:30 [INF] HTTP GET /api/products responded 200 in 6.8245 ms
+2026-06-06 11:09:40.839 +05:30 [INF] HTTP GET /api/products/5 responded 200 in 49.5842 ms
+2026-06-06 11:09:41.270 +05:30 [INF] HTTP GET /api/products/5 responded 200 in 7.7206 ms
+2026-06-06 11:12:51.369 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 51.4638 ms
+2026-06-06 11:13:08.851 +05:30 [INF] HTTP DELETE /api/cart responded 200 in 34.8305 ms
+2026-06-06 11:13:09.754 +05:30 [INF] HTTP POST /api/cart/items responded 200 in 569.1369 ms
+2026-06-06 11:13:10.802 +05:30 [INF] HTTP POST /api/orders responded 201 in 1038.8026 ms
+2026-06-06 11:13:11.561 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 434.7168 ms
+2026-06-06 11:13:18.595 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 80.1040 ms
+2026-06-06 11:13:22.709 +05:30 [INF] HTTP GET /api/categories responded 200 in 35.6940 ms
+2026-06-06 11:13:22.740 +05:30 [INF] HTTP GET /api/categories responded 200 in 6.9007 ms
+2026-06-06 11:13:23.077 +05:30 [INF] HTTP GET /api/products responded 200 in 23.2680 ms
+2026-06-06 11:13:23.419 +05:30 [INF] HTTP GET /api/products responded 200 in 10.6551 ms
+2026-06-06 14:31:30.466 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 113.7021 ms
+2026-06-06 14:31:30.497 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 8.7701 ms
+2026-06-06 14:31:30.646 +05:30 [INF] HTTP GET /api/categories responded 200 in 294.1116 ms
+2026-06-06 14:31:30.793 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 2.1379 ms
+2026-06-06 14:31:30.972 +05:30 [INF] HTTP GET /api/categories responded 200 in 9.5391 ms
+2026-06-06 14:31:31.031 +05:30 [INF] HTTP GET /api/products responded 200 in 69.0614 ms
+2026-06-06 14:31:31.122 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 4.3395 ms
+2026-06-06 14:31:31.366 +05:30 [INF] HTTP GET /api/products responded 200 in 13.4479 ms
+2026-06-06 16:05:51.555 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 58.5486 ms
+2026-06-06 16:05:51.582 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 11.1443 ms
+2026-06-06 16:05:51.732 +05:30 [INF] HTTP GET /api/categories responded 200 in 235.8205 ms
+2026-06-06 16:05:51.883 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 2.3087 ms
+2026-06-06 16:05:52.065 +05:30 [INF] HTTP GET /api/categories responded 200 in 14.3348 ms
+2026-06-06 16:05:52.136 +05:30 [INF] HTTP GET /api/products responded 200 in 85.9017 ms
+2026-06-06 16:05:52.214 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 15.1690 ms
+2026-06-06 16:05:52.462 +05:30 [INF] HTTP GET /api/products responded 200 in 16.9337 ms
+2026-06-06 16:13:24.875 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 874.3496 ms
+2026-06-06 17:05:25.273 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 17:05:28.534 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 17:06:24.403 +05:30 [INF] HTTP POST /api/payment/create-order responded 307 in 42.5442 ms
+2026-06-06 17:06:30.253 +05:30 [INF] HTTP GET / responded 301 in 5.8687 ms
+2026-06-06 17:06:30.327 +05:30 [INF] HTTP GET /index.html responded 200 in 71.4924 ms
+2026-06-06 17:07:22.186 +05:30 [INF] HTTP HEAD / responded 404 in 1253.4827 ms
+2026-06-06 17:08:02.784 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 17:08:03.979 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 17:08:05.690 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 1373.0079 ms
+2026-06-06 17:08:05.975 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 156.2090 ms
+2026-06-06 17:08:34.520 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 17:08:35.438 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 17:08:44.240 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 152.1124 ms
+2026-06-06 17:08:44.274 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 3.7860 ms
+2026-06-06 17:08:44.274 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 3.7842 ms
+2026-06-06 17:08:44.287 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 2.9616 ms
+2026-06-06 17:08:46.558 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-06 17:08:46.875 +05:30 [INF] HTTP GET /api/categories responded 200 in 517.6763 ms
+2026-06-06 17:08:46.949 +05:30 [INF] HTTP GET /api/categories responded 200 in 62.5587 ms
+2026-06-06 17:08:47.454 +05:30 [INF] HTTP GET /api/products responded 200 in 258.2709 ms
+2026-06-06 17:08:47.790 +05:30 [INF] HTTP GET /api/products responded 200 in 19.4979 ms
+2026-06-06 17:31:52.948 +05:30 [INF] HTTP HEAD / responded 404 in 8.6522 ms
+2026-06-06 17:38:54.153 +05:30 [INF] HTTP GET /api/categories responded 200 in 256.9397 ms
+2026-06-06 17:38:54.193 +05:30 [INF] HTTP GET /api/categories responded 200 in 9.2839 ms
+2026-06-06 17:38:54.294 +05:30 [INF] HTTP GET /api/products responded 200 in 108.3856 ms
+2026-06-06 17:38:54.325 +05:30 [INF] HTTP GET /api/products responded 200 in 16.6922 ms
+2026-06-06 17:38:58.076 +05:30 [INF] HTTP GET /api/categories responded 200 in 17.9839 ms
+2026-06-06 17:38:58.103 +05:30 [INF] HTTP GET /api/categories responded 200 in 11.8807 ms
+2026-06-06 17:38:58.422 +05:30 [INF] HTTP GET /api/products responded 200 in 19.9456 ms
+2026-06-06 17:38:58.778 +05:30 [INF] HTTP GET /api/products responded 200 in 24.4836 ms
+2026-06-06 17:38:59.671 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 146.3703 ms
+2026-06-06 17:38:59.703 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 16.8799 ms
+2026-06-06 17:38:59.785 +05:30 [INF] HTTP GET /api/products responded 200 in 22.7432 ms
+2026-06-06 17:39:00.069 +05:30 [INF] HTTP GET /api/products responded 200 in 71.6362 ms
+2026-06-06 17:39:04.818 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 19.6968 ms
+2026-06-06 17:39:05.157 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 15.1489 ms
+2026-06-06 17:39:15.456 +05:30 [ERR] HTTP POST /api/auth/login responded 500 in 133.6617 ms
+EcommerceCA.Common.Exceptions.UnauthorizedException: Invalid email or password.
+   at EcommerceCA.Application.Services.AuthService.LoginAsync(LoginRequestDto dto) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\Services\AuthService.cs:line 62
+   at EcommerceCA.API.Controllers.AuthController.Login(LoginRequestDto dto) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.API\Controllers\AuthController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-06 17:39:15.519 +05:30 [ERR] Unhandled exception [POST] /api/auth/login — Invalid email or password.
+EcommerceCA.Common.Exceptions.UnauthorizedException: Invalid email or password.
+   at EcommerceCA.Application.Services.AuthService.LoginAsync(LoginRequestDto dto) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\Services\AuthService.cs:line 62
+   at EcommerceCA.API.Controllers.AuthController.Login(LoginRequestDto dto) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.API\Controllers\AuthController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at EcommerceCA.API.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.API\Middleware\ExceptionMiddleware.cs:line 31
+2026-06-06 17:39:17.617 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 419.9855 ms
+2026-06-06 17:39:17.709 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 59.3278 ms
+2026-06-06 17:39:18.052 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 16.5794 ms
+2026-06-06 17:39:18.704 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 21.1670 ms
+2026-06-06 17:39:19.036 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 14.8449 ms
+2026-06-06 17:39:27.609 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 150.7621 ms
+2026-06-06 17:39:42.136 +05:30 [INF] HTTP DELETE /api/cart responded 200 in 36.0955 ms
+2026-06-06 17:39:43.165 +05:30 [INF] HTTP POST /api/cart/items responded 200 in 797.2272 ms
+2026-06-06 17:39:44.511 +05:30 [INF] HTTP POST /api/orders responded 201 in 1331.2663 ms
+2026-06-06 17:39:45.317 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 474.5717 ms
+2026-06-06 17:40:02.397 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 46.5347 ms
+2026-06-06 17:40:05.352 +05:30 [INF] HTTP GET /api/categories responded 200 in 16.9294 ms
+2026-06-06 17:40:05.365 +05:30 [INF] HTTP GET /api/categories responded 200 in 4.4275 ms
+2026-06-06 17:40:05.722 +05:30 [INF] HTTP GET /api/products responded 200 in 17.6200 ms
+2026-06-06 17:40:05.971 +05:30 [INF] HTTP GET /api/products responded 200 in 3.4748 ms
+2026-06-06 17:40:10.651 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.8675 ms
+2026-06-06 17:40:10.972 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.2527 ms
+2026-06-06 17:40:10.989 +05:30 [INF] HTTP GET /api/products responded 200 in 4.0073 ms
+2026-06-06 17:40:11.309 +05:30 [INF] HTTP GET /api/products responded 200 in 6.8114 ms
+2026-06-06 17:40:12.232 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 11.2531 ms
+2026-06-06 17:40:12.248 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 5.3273 ms
+2026-06-06 17:40:12.488 +05:30 [INF] HTTP GET /api/products responded 200 in 3.0848 ms
+2026-06-06 17:40:12.553 +05:30 [INF] HTTP GET /api/products responded 200 in 4.2539 ms
+2026-06-06 17:40:17.292 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 2.2394 ms
+2026-06-06 17:40:17.613 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 4.0735 ms
+2026-06-06 17:40:23.690 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 16.7542 ms
+2026-06-06 17:40:36.890 +05:30 [INF] HTTP DELETE /api/cart responded 200 in 5.9467 ms
+2026-06-06 17:40:37.511 +05:30 [INF] HTTP POST /api/cart/items responded 200 in 302.4466 ms
+2026-06-06 17:40:38.735 +05:30 [INF] HTTP POST /api/orders responded 201 in 1214.5224 ms
+2026-06-06 17:40:39.311 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 235.9167 ms
+2026-06-06 17:41:07.771 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 32.4421 ms
+2026-06-06 17:41:22.517 +05:30 [INF] HTTP GET /api/products responded 200 in 29.6412 ms
+2026-06-06 17:41:22.799 +05:30 [INF] HTTP GET /api/orders responded 200 in 627.9599 ms
+2026-06-06 17:41:22.844 +05:30 [INF] HTTP GET /api/products responded 200 in 4.6975 ms
+2026-06-06 17:41:23.548 +05:30 [INF] HTTP GET /api/orders responded 200 in 456.3395 ms
+2026-06-06 17:41:39.718 +05:30 [INF] HTTP GET /api/categories responded 200 in 29.2962 ms
+2026-06-06 17:41:39.724 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 30.4757 ms
+2026-06-06 17:41:39.771 +05:30 [INF] HTTP GET /api/categories responded 200 in 16.6531 ms
+2026-06-06 17:41:39.789 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 22.9871 ms
+2026-06-06 17:41:39.822 +05:30 [INF] HTTP GET /api/products responded 200 in 10.0843 ms
+2026-06-06 17:41:39.828 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 11.3096 ms
+2026-06-06 17:41:40.179 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 3.0019 ms
+2026-06-06 17:41:40.184 +05:30 [INF] HTTP GET /api/products responded 200 in 5.3469 ms
+2026-06-06 17:41:41.280 +05:30 [INF] HTTP GET /api/products responded 200 in 7.2897 ms
+2026-06-06 17:41:41.601 +05:30 [INF] HTTP GET /api/products responded 200 in 2.4473 ms
+2026-06-06 17:41:42.091 +05:30 [INF] HTTP GET /api/orders responded 200 in 507.7413 ms
+2026-06-06 17:41:42.553 +05:30 [INF] HTTP GET /api/orders responded 200 in 448.2294 ms
+2026-06-06 17:55:59.819 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 17:56:01.233 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 17:56:03.417 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 1076.0983 ms
+2026-06-06 17:56:50.676 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 17:56:51.901 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 17:56:53.260 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 938.9080 ms
+2026-06-06 17:56:53.460 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 139.6302 ms
+2026-06-06 17:58:40.327 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 17:58:41.589 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 17:58:49.043 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 125.2754 ms
+2026-06-06 17:58:49.091 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 5.5982 ms
+2026-06-06 17:58:49.091 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 5.5991 ms
+2026-06-06 17:58:49.112 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 2.6557 ms
+2026-06-06 17:58:49.125 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-06 17:58:49.485 +05:30 [INF] HTTP GET /api/categories responded 200 in 570.0711 ms
+2026-06-06 17:58:49.602 +05:30 [INF] HTTP GET /api/categories responded 200 in 106.1144 ms
+2026-06-06 17:58:49.993 +05:30 [INF] HTTP GET /api/products responded 200 in 186.0816 ms
+2026-06-06 17:58:50.324 +05:30 [INF] HTTP GET /api/products responded 200 in 17.0618 ms
+2026-06-06 18:04:50.291 +05:30 [INF] HTTP GET /api/categories responded 200 in 52.5806 ms
+2026-06-06 18:04:50.319 +05:30 [INF] HTTP GET /api/categories responded 200 in 8.4914 ms
+2026-06-06 18:04:50.381 +05:30 [INF] HTTP GET /api/products responded 200 in 66.8956 ms
+2026-06-06 18:04:50.420 +05:30 [INF] HTTP GET /api/products responded 200 in 19.8259 ms
+2026-06-06 18:04:57.693 +05:30 [INF] HTTP GET /api/categories responded 200 in 4.1593 ms
+2026-06-06 18:04:57.718 +05:30 [INF] HTTP GET /api/categories responded 200 in 4.3900 ms
+2026-06-06 18:04:57.728 +05:30 [INF] HTTP GET /api/products responded 200 in 8.2222 ms
+2026-06-06 18:04:57.756 +05:30 [INF] HTTP GET /api/products responded 200 in 5.5632 ms
+2026-06-06 18:04:59.485 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 54.7722 ms
+2026-06-06 18:04:59.504 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 4.8629 ms
+2026-06-06 18:04:59.508 +05:30 [INF] HTTP GET /api/products responded 200 in 5.2542 ms
+2026-06-06 18:04:59.524 +05:30 [INF] HTTP GET /api/products responded 200 in 3.6515 ms
+2026-06-06 18:05:03.668 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 6.0881 ms
+2026-06-06 18:05:03.685 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 2.2635 ms
+2026-06-06 18:05:10.673 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 419.0843 ms
+2026-06-06 18:05:10.756 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 54.6420 ms
+2026-06-06 18:05:10.784 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 13.0635 ms
+2026-06-06 18:05:11.724 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 2.9570 ms
+2026-06-06 18:05:11.739 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 2.0081 ms
+2026-06-06 18:05:20.380 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 144.7541 ms
+2026-06-06 18:05:31.011 +05:30 [INF] HTTP DELETE /api/cart responded 200 in 34.2579 ms
+2026-06-06 18:05:31.512 +05:30 [INF] HTTP POST /api/cart/items responded 200 in 482.6536 ms
+2026-06-06 18:05:32.730 +05:30 [INF] HTTP POST /api/orders responded 201 in 1207.6720 ms
+2026-06-06 18:05:34.186 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 1445.6141 ms
+2026-06-06 18:06:54.115 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 26.5988 ms
+2026-06-06 18:06:54.141 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 4.7954 ms
+2026-06-06 18:06:54.148 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 12.6139 ms
+2026-06-06 18:06:54.196 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 9.1588 ms
+2026-06-06 18:14:41.559 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 18:14:42.776 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 18:14:44.277 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 956.7575 ms
+2026-06-06 18:14:44.473 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 88.6455 ms
+2026-06-06 18:16:28.933 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 18:16:30.070 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 18:16:48.736 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 84.5615 ms
+2026-06-06 18:16:48.776 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 5.2706 ms
+2026-06-06 18:16:48.776 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 5.2710 ms
+2026-06-06 18:16:49.110 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 2.3704 ms
+2026-06-06 18:17:26.719 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-06 18:17:27.171 +05:30 [INF] HTTP GET /api/categories responded 200 in 600.0554 ms
+2026-06-06 18:17:27.617 +05:30 [INF] HTTP GET /api/categories responded 200 in 119.2958 ms
+2026-06-06 18:17:27.700 +05:30 [INF] HTTP GET /api/products/p1 responded 404 in 1.1775 ms
+2026-06-06 18:17:27.714 +05:30 [INF] HTTP GET /api/products/p1 responded 404 in 0.2671 ms
+2026-06-06 18:17:27.734 +05:30 [INF] HTTP GET /api/products responded 200 in 237.7827 ms
+2026-06-06 18:17:28.051 +05:30 [INF] HTTP GET /api/products responded 200 in 28.0571 ms
+2026-06-06 18:17:28.095 +05:30 [INF] HTTP GET /api/products responded 200 in 33.0945 ms
+2026-06-06 18:17:28.430 +05:30 [INF] HTTP GET /api/products responded 200 in 21.0877 ms
+2026-06-06 18:17:31.843 +05:30 [INF] HTTP GET /api/products/1 responded 200 in 64.8106 ms
+2026-06-06 18:17:31.859 +05:30 [INF] HTTP GET /api/products/1 responded 200 in 3.9181 ms
+2026-06-06 18:18:00.821 +05:30 [INF] HTTP POST /api/users/addresses responded 401 in 3.4567 ms
+2026-06-06 18:18:03.612 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 259.3704 ms
+2026-06-06 18:18:03.682 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 42.0875 ms
+2026-06-06 18:18:04.011 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 8.4388 ms
+2026-06-06 18:18:24.287 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 101.1273 ms
+2026-06-06 18:18:35.114 +05:30 [INF] HTTP DELETE /api/cart responded 200 in 37.4446 ms
+2026-06-06 18:18:36.027 +05:30 [INF] HTTP POST /api/cart/items responded 200 in 595.0355 ms
+2026-06-06 18:18:37.232 +05:30 [INF] HTTP POST /api/orders responded 201 in 1194.8020 ms
+2026-06-06 18:18:38.199 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 647.6154 ms
+2026-06-06 18:20:29.253 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 34.5370 ms
+2026-06-06 18:20:29.270 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 3.2049 ms
+2026-06-06 18:20:29.271 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.7578 ms
+2026-06-06 18:20:29.621 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 17.1815 ms
+2026-06-06 18:28:50.750 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 314.5105 ms
+2026-06-06 18:28:50.787 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 13.9669 ms
+2026-06-06 18:28:50.795 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 8.5033 ms
+2026-06-06 18:28:51.113 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 3.8465 ms
+2026-06-06 18:29:51.835 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 367.8267 ms
+2026-06-06 18:29:52.010 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 69.3295 ms
+2026-06-06 18:32:01.234 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 33.5082 ms
+2026-06-06 18:32:01.257 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 2.4405 ms
+2026-06-06 18:32:01.272 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 3.8056 ms
+2026-06-06 18:32:01.278 +05:30 [INF] HTTP GET /api/products responded 200 in 78.4966 ms
+2026-06-06 18:32:01.289 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 5.2499 ms
+2026-06-06 18:32:01.591 +05:30 [INF] HTTP GET /api/products responded 200 in 25.2493 ms
+2026-06-06 18:32:02.088 +05:30 [INF] HTTP GET /api/orders responded 200 in 888.7301 ms
+2026-06-06 18:32:02.854 +05:30 [INF] HTTP GET /api/orders responded 200 in 756.3280 ms
+2026-06-06 21:57:07.247 +05:30 [WRN] No store type was specified for the decimal property 'GrandTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 21:57:09.126 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-06-06 21:57:36.034 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 214.3050 ms
+2026-06-06 21:57:36.090 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 7.5557 ms
+2026-06-06 21:57:36.100 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 3.4833 ms
+2026-06-06 21:57:36.117 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 0.6157 ms
+2026-06-06 21:57:36.146 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-06 21:57:36.550 +05:30 [INF] HTTP GET /api/categories responded 200 in 732.7021 ms
+2026-06-06 21:57:36.665 +05:30 [INF] HTTP GET /api/categories responded 200 in 107.2859 ms
+2026-06-06 21:57:37.141 +05:30 [INF] HTTP GET /api/products responded 200 in 271.3541 ms
+2026-06-06 21:57:37.490 +05:30 [INF] HTTP GET /api/products responded 200 in 21.6612 ms
+2026-06-06 21:57:47.357 +05:30 [INF] HTTP GET /api/categories responded 200 in 23.7380 ms
+2026-06-06 21:57:47.381 +05:30 [INF] HTTP GET /api/categories responded 200 in 7.5490 ms
+2026-06-06 21:57:47.706 +05:30 [INF] HTTP GET /api/products responded 200 in 21.4304 ms
+2026-06-06 21:57:48.037 +05:30 [INF] HTTP GET /api/products responded 200 in 9.2314 ms
+2026-06-06 21:57:48.613 +05:30 [INF] HTTP GET /api/products/8 responded 200 in 41.1828 ms
+2026-06-06 21:57:48.627 +05:30 [INF] HTTP GET /api/products/8 responded 200 in 3.3531 ms
+2026-06-06 21:57:48.839 +05:30 [INF] HTTP GET /api/products responded 200 in 4.3468 ms
+2026-06-06 21:57:48.938 +05:30 [INF] HTTP GET /api/products responded 200 in 5.7740 ms
+2026-06-06 21:57:54.350 +05:30 [INF] HTTP GET /api/products/8 responded 200 in 4.5816 ms
+2026-06-06 21:57:54.672 +05:30 [INF] HTTP GET /api/products/8 responded 200 in 1.8067 ms
+2026-06-06 21:58:01.197 +05:30 [INF] HTTP POST /api/users/addresses responded 401 in 2.0626 ms
+2026-06-06 21:58:13.894 +05:30 [ERR] HTTP POST /api/auth/login responded 500 in 67.1579 ms
+EcommerceCA.Common.Exceptions.UnauthorizedException: Invalid email or password.
+   at EcommerceCA.Application.Services.AuthService.LoginAsync(LoginRequestDto dto) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\Services\AuthService.cs:line 62
+   at EcommerceCA.API.Controllers.AuthController.Login(LoginRequestDto dto) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.API\Controllers\AuthController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-06 21:58:13.934 +05:30 [ERR] Unhandled exception [POST] /api/auth/login — Invalid email or password.
+EcommerceCA.Common.Exceptions.UnauthorizedException: Invalid email or password.
+   at EcommerceCA.Application.Services.AuthService.LoginAsync(LoginRequestDto dto) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\Services\AuthService.cs:line 62
+   at EcommerceCA.API.Controllers.AuthController.Login(LoginRequestDto dto) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.API\Controllers\AuthController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at EcommerceCA.API.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.API\Middleware\ExceptionMiddleware.cs:line 31
+2026-06-06 21:58:15.747 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 271.0239 ms
+2026-06-06 21:58:16.132 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 48.6749 ms
+2026-06-06 21:58:16.358 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 9.0830 ms
+2026-06-06 21:58:22.909 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 100.6173 ms
+2026-06-06 21:58:32.235 +05:30 [INF] HTTP DELETE /api/cart responded 200 in 20.4540 ms
+2026-06-06 21:58:33.093 +05:30 [INF] HTTP POST /api/cart/items responded 200 in 530.1424 ms
+2026-06-06 21:58:34.060 +05:30 [INF] HTTP POST /api/orders responded 201 in 955.1864 ms
+2026-06-06 21:58:35.096 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 712.9154 ms
+2026-06-06 21:59:13.587 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 53.6162 ms
+2026-06-06 21:59:16.904 +05:30 [INF] HTTP GET /api/categories responded 200 in 29.8538 ms
+2026-06-06 21:59:16.921 +05:30 [INF] HTTP GET /api/categories responded 200 in 3.6443 ms
+2026-06-06 21:59:17.274 +05:30 [INF] HTTP GET /api/products responded 200 in 45.6982 ms
+2026-06-06 21:59:17.625 +05:30 [INF] HTTP GET /api/products responded 200 in 34.6558 ms
+2026-06-06 21:59:21.716 +05:30 [INF] HTTP GET /api/products responded 200 in 26.9870 ms
+2026-06-06 21:59:21.733 +05:30 [INF] HTTP GET /api/products responded 200 in 8.8685 ms
+2026-06-06 21:59:22.848 +05:30 [INF] HTTP GET /api/orders responded 200 in 1142.9969 ms
+2026-06-06 21:59:23.914 +05:30 [INF] HTTP GET /api/orders responded 200 in 1046.0026 ms
+2026-06-06 21:59:34.609 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 18.3862 ms
+2026-06-06 21:59:34.622 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 1.8001 ms
+2026-06-06 21:59:34.686 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 1.7814 ms
+2026-06-06 21:59:34.722 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 1.9386 ms
+2026-06-06 21:59:36.345 +05:30 [INF] HTTP GET /api/products responded 200 in 63.4816 ms
+2026-06-06 21:59:36.359 +05:30 [INF] HTTP GET /api/products responded 200 in 2.9718 ms
+2026-06-06 21:59:37.313 +05:30 [INF] HTTP GET /api/orders responded 200 in 1030.3850 ms
+2026-06-06 21:59:38.387 +05:30 [INF] HTTP GET /api/orders responded 200 in 1057.7460 ms
+2026-06-06 21:59:41.830 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 0.7704 ms
+2026-06-06 21:59:41.847 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 0.7959 ms
+2026-06-06 21:59:41.883 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 0.3940 ms
+2026-06-06 21:59:41.898 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 0.6410 ms
+2026-06-06 22:01:07.077 +05:30 [INF] HTTP GET /api/categories responded 200 in 19.0414 ms
+2026-06-06 22:01:07.263 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.5837 ms
+2026-06-06 22:01:07.332 +05:30 [INF] HTTP GET /api/products responded 200 in 18.2823 ms
+2026-06-06 22:01:07.395 +05:30 [INF] HTTP GET /api/products responded 200 in 3.0215 ms
+2026-06-06 22:01:07.797 +05:30 [INF] HTTP GET /api/products/8 responded 200 in 14.4870 ms
+2026-06-06 22:01:07.813 +05:30 [INF] HTTP GET /api/products/8 responded 200 in 2.0488 ms
+2026-06-06 22:01:08.126 +05:30 [INF] HTTP GET /api/products responded 200 in 2.8236 ms
+2026-06-06 22:01:08.474 +05:30 [INF] HTTP GET /api/products responded 200 in 20.9910 ms
+2026-06-06 22:01:13.080 +05:30 [INF] HTTP GET /api/products/8 responded 200 in 16.7316 ms
+2026-06-06 22:01:13.094 +05:30 [INF] HTTP GET /api/products/8 responded 200 in 2.6240 ms
+2026-06-06 22:05:50.020 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 1.1699 ms
+2026-06-06 22:05:50.082 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 0.6817 ms
+2026-06-06 22:05:50.087 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 37.4055 ms
+2026-06-06 22:05:50.110 +05:30 [INF] HTTP GET /api/products responded 200 in 78.3453 ms
+2026-06-06 22:05:50.437 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 28.4308 ms
+2026-06-06 22:05:50.444 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 33.5523 ms
+2026-06-06 22:05:50.474 +05:30 [INF] HTTP GET /api/products responded 200 in 49.2648 ms
+2026-06-06 22:05:50.779 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 10.9265 ms
+2026-06-06 22:05:51.200 +05:30 [INF] HTTP GET /api/orders responded 200 in 1166.0172 ms
+2026-06-06 22:05:52.465 +05:30 [INF] HTTP GET /api/orders responded 200 in 964.5552 ms
+2026-06-06 22:05:55.368 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 14.1048 ms
+2026-06-06 22:05:55.407 +05:30 [INF] HTTP GET /api/products responded 200 in 50.6225 ms
+2026-06-06 22:05:55.693 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 7.8990 ms
+2026-06-06 22:05:55.697 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 10.6158 ms
+2026-06-06 22:05:55.760 +05:30 [INF] HTTP GET /api/products responded 200 in 28.9361 ms
+2026-06-06 22:05:56.021 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 12.4197 ms
+2026-06-06 22:05:56.643 +05:30 [INF] HTTP GET /api/orders responded 200 in 1288.2086 ms
+2026-06-06 22:05:57.765 +05:30 [INF] HTTP GET /api/orders responded 200 in 823.5251 ms
+2026-06-06 22:06:20.025 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 16.6508 ms
+2026-06-06 22:06:20.117 +05:30 [INF] HTTP GET /api/products responded 200 in 74.9873 ms
+2026-06-06 22:06:20.589 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 103.3832 ms
+2026-06-06 22:06:20.595 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 111.8646 ms
+2026-06-06 22:06:20.596 +05:30 [INF] HTTP GET /api/products responded 200 in 104.0256 ms
+2026-06-06 22:06:20.959 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 8.3992 ms
+2026-06-06 22:06:21.611 +05:30 [INF] HTTP GET /api/orders responded 200 in 1571.8623 ms
+2026-06-06 22:06:22.697 +05:30 [INF] HTTP GET /api/orders responded 200 in 784.3886 ms
+2026-06-06 22:06:26.019 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 10.6225 ms
+2026-06-06 22:06:26.030 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 2.0860 ms
+2026-06-06 22:06:26.082 +05:30 [INF] HTTP GET /api/products responded 200 in 29.5559 ms
+2026-06-06 22:06:26.394 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.1101 ms
+2026-06-06 22:06:26.400 +05:30 [INF] HTTP GET /api/products responded 200 in 6.6877 ms
+2026-06-06 22:06:26.718 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 1.4995 ms
+2026-06-06 22:06:27.459 +05:30 [INF] HTTP GET /api/orders responded 200 in 1100.1206 ms
+2026-06-06 22:06:28.604 +05:30 [INF] HTTP GET /api/orders responded 200 in 858.0555 ms
+2026-06-06 22:06:32.009 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 1.7376 ms
+2026-06-06 22:06:32.021 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 2.4532 ms
+2026-06-06 22:06:32.167 +05:30 [INF] HTTP GET /api/products responded 200 in 2.7395 ms
+2026-06-06 22:06:32.339 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 1.3676 ms
+2026-06-06 22:06:32.525 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.0818 ms
+2026-06-06 22:06:32.527 +05:30 [INF] HTTP GET /api/products responded 200 in 7.6072 ms
+2026-06-06 22:06:33.677 +05:30 [INF] HTTP GET /api/orders responded 200 in 1339.9380 ms
+2026-06-06 22:06:34.563 +05:30 [INF] HTTP GET /api/orders responded 200 in 877.4926 ms
+2026-06-06 22:07:27.018 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 14.2675 ms
+2026-06-06 22:07:27.037 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 5.7854 ms
+2026-06-06 22:07:27.098 +05:30 [INF] HTTP GET /api/products responded 200 in 55.6933 ms
+2026-06-06 22:07:27.387 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 8.8122 ms
+2026-06-06 22:07:27.462 +05:30 [INF] HTTP GET /api/products responded 200 in 15.7797 ms
+2026-06-06 22:07:27.703 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 1.9130 ms
+2026-06-06 22:07:28.586 +05:30 [INF] HTTP GET /api/orders responded 200 in 1242.3413 ms
+2026-06-06 22:07:30.086 +05:30 [INF] HTTP GET /api/orders responded 200 in 1203.3736 ms
+2026-06-06 22:07:37.030 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 12.9938 ms
+2026-06-06 22:07:37.048 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 5.4021 ms
+2026-06-06 22:07:37.078 +05:30 [INF] HTTP GET /api/products responded 200 in 27.6092 ms
+2026-06-06 22:07:37.368 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.2113 ms
+2026-06-06 22:07:37.564 +05:30 [INF] HTTP GET /api/products responded 200 in 37.3845 ms
+2026-06-06 22:07:37.769 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 8.9103 ms
+2026-06-06 22:07:38.710 +05:30 [INF] HTTP GET /api/orders responded 200 in 1361.0452 ms
+2026-06-06 22:07:39.941 +05:30 [INF] HTTP GET /api/orders responded 200 in 927.9514 ms
+2026-06-06 22:07:59.277 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 323.5855 ms
+2026-06-06 22:07:59.403 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 10.8217 ms
+2026-06-06 22:09:57.800 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 23.8318 ms
+2026-06-06 22:09:57.807 +05:30 [INF] HTTP GET /api/categories responded 200 in 32.3908 ms
+2026-06-06 22:09:57.818 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 4.3471 ms
+2026-06-06 22:09:57.824 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.8077 ms
+2026-06-06 22:09:57.870 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 6.9070 ms
+2026-06-06 22:09:57.903 +05:30 [INF] HTTP GET /api/products responded 200 in 34.2099 ms
+2026-06-06 22:09:58.194 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 1.4540 ms
+2026-06-06 22:09:58.229 +05:30 [INF] HTTP GET /api/products responded 200 in 3.0789 ms
+2026-06-06 22:09:59.716 +05:30 [INF] HTTP GET /api/products responded 200 in 4.4384 ms
+2026-06-06 22:10:00.043 +05:30 [INF] HTTP GET /api/products responded 200 in 5.9986 ms
+2026-06-06 22:10:00.719 +05:30 [INF] HTTP GET /api/orders responded 200 in 1006.0507 ms
+2026-06-06 22:10:01.883 +05:30 [INF] HTTP GET /api/orders responded 200 in 890.9793 ms
+2026-06-06 22:13:22.488 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 29.1442 ms
+2026-06-06 22:13:22.510 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 1.8500 ms
+2026-06-06 22:13:22.550 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.4001 ms
+2026-06-06 22:13:22.566 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.7337 ms
+2026-06-06 22:13:22.754 +05:30 [INF] HTTP GET /api/categories responded 200 in 16.9987 ms
+2026-06-06 22:13:22.770 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.6299 ms
+2026-06-06 22:13:23.141 +05:30 [INF] HTTP GET /api/products responded 200 in 47.7538 ms
+2026-06-06 22:13:23.376 +05:30 [INF] HTTP GET /api/products responded 200 in 32.6674 ms
+2026-06-06 22:13:29.451 +05:30 [INF] HTTP GET /api/products responded 200 in 21.2185 ms
+2026-06-06 22:13:29.776 +05:30 [INF] HTTP GET /api/products responded 200 in 4.8364 ms
+2026-06-06 22:13:30.768 +05:30 [INF] HTTP GET /api/orders responded 200 in 1030.1521 ms
+2026-06-06 22:13:31.933 +05:30 [INF] HTTP GET /api/orders responded 200 in 874.1401 ms
+2026-06-06 22:13:39.765 +05:30 [INF] HTTP GET /api/categories responded 200 in 14.3045 ms
+2026-06-06 22:13:39.771 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 20.7042 ms
+2026-06-06 22:13:39.780 +05:30 [INF] HTTP GET /api/categories responded 200 in 3.0205 ms
+2026-06-06 22:13:39.859 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 1.9970 ms
+2026-06-06 22:13:39.870 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 8.5563 ms
+2026-06-06 22:13:39.902 +05:30 [INF] HTTP GET /api/products responded 200 in 43.5732 ms
+2026-06-06 22:13:40.107 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 7.2136 ms
+2026-06-06 22:13:40.222 +05:30 [INF] HTTP GET /api/products responded 200 in 21.5277 ms
+2026-06-06 22:13:41.911 +05:30 [INF] HTTP GET /api/products responded 200 in 26.4771 ms
+2026-06-06 22:13:42.226 +05:30 [INF] HTTP GET /api/products responded 200 in 2.0887 ms
+2026-06-06 22:13:44.048 +05:30 [INF] HTTP GET /api/orders responded 200 in 2161.3957 ms
+2026-06-06 22:13:45.510 +05:30 [INF] HTTP GET /api/orders responded 200 in 1162.8696 ms
+2026-06-06 22:17:36.017 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 53.7386 ms
+2026-06-06 22:17:36.070 +05:30 [INF] HTTP GET /api/categories responded 200 in 103.1610 ms
+2026-06-06 22:17:36.114 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 4.5732 ms
+2026-06-06 22:17:36.122 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 13.8154 ms
+2026-06-06 22:17:36.180 +05:30 [INF] HTTP GET /api/categories responded 200 in 34.4903 ms
+2026-06-06 22:17:36.224 +05:30 [INF] HTTP GET /api/products responded 200 in 80.2282 ms
+2026-06-06 22:17:36.513 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 25.4344 ms
+2026-06-06 22:17:36.568 +05:30 [INF] HTTP GET /api/products responded 200 in 20.7517 ms
+2026-06-06 22:17:49.953 +05:30 [INF] HTTP GET /api/products responded 200 in 20.9090 ms
+2026-06-06 22:17:50.234 +05:30 [INF] HTTP GET /api/products responded 200 in 3.1079 ms
+2026-06-06 22:17:51.416 +05:30 [INF] HTTP GET /api/orders responded 200 in 1215.7913 ms
+2026-06-06 22:17:52.309 +05:30 [INF] HTTP GET /api/orders responded 200 in 881.7630 ms
+2026-06-06 22:22:07.046 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 22.3744 ms
+2026-06-06 22:22:07.068 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 7.3492 ms
+2026-06-06 22:22:07.098 +05:30 [INF] HTTP GET /api/products responded 200 in 35.9927 ms
+2026-06-06 22:22:07.399 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 4.0916 ms
+2026-06-06 22:22:07.413 +05:30 [INF] HTTP GET /api/products responded 200 in 3.0573 ms
+2026-06-06 22:22:07.725 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 1.5078 ms
+2026-06-06 22:22:09.042 +05:30 [INF] HTTP GET /api/orders responded 200 in 1677.5514 ms
+2026-06-06 22:22:10.443 +05:30 [INF] HTTP GET /api/orders responded 200 in 1101.0848 ms
+2026-06-06 22:22:29.921 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 2067.4315 ms
+2026-06-06 22:22:30.059 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 13.6605 ms
+2026-06-06 22:52:42.395 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 362.1775 ms
+2026-06-06 22:52:42.401 +05:30 [INF] HTTP GET /api/categories responded 200 in 172.9672 ms
+2026-06-06 22:52:42.505 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 12.4922 ms
+2026-06-06 22:52:42.578 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 35.2900 ms
+2026-06-06 22:52:42.604 +05:30 [INF] HTTP GET /api/categories responded 200 in 97.3119 ms
+2026-06-06 22:52:42.684 +05:30 [INF] HTTP GET /api/products responded 200 in 160.7572 ms
+2026-06-06 22:52:42.929 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 19.9743 ms
+2026-06-06 22:52:43.071 +05:30 [INF] HTTP GET /api/products responded 200 in 56.3408 ms
+2026-06-06 22:52:44.448 +05:30 [INF] HTTP GET /api/products responded 200 in 22.7527 ms
+2026-06-06 22:52:44.778 +05:30 [INF] HTTP GET /api/products responded 200 in 50.8682 ms
+2026-06-06 22:52:46.080 +05:30 [INF] HTTP GET /api/orders responded 200 in 1385.2519 ms
+2026-06-06 22:52:47.332 +05:30 [INF] HTTP GET /api/orders responded 200 in 1238.4987 ms
+2026-06-06 22:54:07.527 +05:30 [INF] HTTP GET /api/categories responded 200 in 22.9583 ms
+2026-06-06 22:54:07.540 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.4997 ms
+2026-06-06 22:54:07.787 +05:30 [INF] HTTP GET /api/products responded 200 in 19.4918 ms
+2026-06-06 22:54:07.850 +05:30 [INF] HTTP GET /api/products responded 200 in 6.8450 ms
+2026-06-06 22:54:13.700 +05:30 [INF] HTTP GET /api/categories responded 200 in 4.7195 ms
+2026-06-06 22:54:14.025 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.1584 ms
+2026-06-06 22:54:14.027 +05:30 [INF] HTTP GET /api/products responded 200 in 3.6524 ms
+2026-06-06 22:54:14.349 +05:30 [INF] HTTP GET /api/products responded 200 in 4.1097 ms
+2026-06-06 22:54:15.211 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 14.4207 ms
+2026-06-06 22:54:15.226 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 3.2896 ms
+2026-06-06 22:54:15.465 +05:30 [INF] HTTP GET /api/products responded 200 in 5.7552 ms
+2026-06-06 22:54:15.533 +05:30 [INF] HTTP GET /api/products responded 200 in 4.4747 ms
+2026-06-06 22:55:08.324 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 30.1190 ms
+2026-06-06 22:55:08.650 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 1.8266 ms
+2026-06-06 22:55:13.985 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 147.4101 ms
+2026-06-06 22:55:22.393 +05:30 [INF] HTTP DELETE /api/cart responded 200 in 16.0044 ms
+2026-06-06 22:55:23.110 +05:30 [INF] HTTP POST /api/cart/items responded 200 in 381.4218 ms
+2026-06-06 22:55:23.802 +05:30 [INF] HTTP POST /api/orders responded 201 in 683.0652 ms
+2026-06-06 22:55:24.571 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 448.9586 ms
+2026-06-06 22:57:51.603 +05:30 [INF] HTTP DELETE /api/cart responded 200 in 18.0471 ms
+2026-06-06 22:57:52.149 +05:30 [INF] HTTP POST /api/cart/items responded 200 in 298.4865 ms
+2026-06-06 22:57:52.858 +05:30 [INF] HTTP POST /api/orders responded 201 in 697.0757 ms
+2026-06-06 22:57:53.563 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 384.2971 ms
+2026-06-06 22:59:53.364 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 22.7173 ms
+2026-06-06 22:59:53.375 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 2.2913 ms
+2026-06-06 22:59:54.897 +05:30 [INF] HTTP GET /api/products responded 200 in 13.6289 ms
+2026-06-06 22:59:55.211 +05:30 [INF] HTTP GET /api/orders responded 401 in 10.4688 ms
+2026-06-06 22:59:55.219 +05:30 [INF] HTTP GET /api/products responded 200 in 3.4267 ms
+2026-06-06 22:59:55.529 +05:30 [INF] HTTP GET /api/orders responded 401 in 0.2341 ms
+2026-06-06 23:22:17.831 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 44.2927 ms
+2026-06-06 23:22:17.837 +05:30 [INF] HTTP GET /api/orders responded 401 in 43.3277 ms
+2026-06-06 23:22:18.259 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 1.3856 ms
+2026-06-06 23:22:18.366 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 0.6716 ms
+2026-06-06 23:22:18.591 +05:30 [INF] HTTP GET /api/orders responded 401 in 0.8468 ms
+2026-06-06 23:22:18.919 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 2.2678 ms
+2026-06-06 23:22:20.276 +05:30 [INF] HTTP GET /api/products responded 200 in 2490.1687 ms
+2026-06-06 23:22:22.766 +05:30 [INF] HTTP GET /api/products responded 200 in 627.7411 ms
+2026-06-06 23:23:25.354 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 33.6575 ms
+2026-06-06 23:23:25.489 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 3.6633 ms
+2026-06-06 23:23:27.834 +05:30 [INF] HTTP GET /api/orders responded 401 in 1.9292 ms
+2026-06-06 23:23:27.868 +05:30 [INF] HTTP GET /api/products responded 200 in 34.2851 ms
+2026-06-06 23:23:28.152 +05:30 [INF] HTTP GET /api/orders responded 401 in 0.3232 ms
+2026-06-06 23:23:28.188 +05:30 [INF] HTTP GET /api/products responded 200 in 5.7996 ms
+2026-06-06 23:23:35.608 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 29.5152 ms
+2026-06-06 23:23:35.620 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 1.5725 ms
+2026-06-06 23:23:42.185 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 2.3451 ms
+2026-06-06 23:23:42.198 +05:30 [INF] HTTP GET /api/products/4 responded 200 in 1.8262 ms
+2026-06-06 23:23:47.282 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 266.1773 ms
+2026-06-06 23:23:47.319 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 15.3601 ms
+2026-06-06 23:23:47.644 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 3.4821 ms
+2026-06-06 23:23:51.571 +05:30 [INF] HTTP POST /api/users/addresses responded 201 in 43.0496 ms
+2026-06-06 23:24:00.658 +05:30 [INF] HTTP DELETE /api/cart responded 200 in 7.3991 ms
+2026-06-06 23:24:01.279 +05:30 [INF] HTTP POST /api/cart/items responded 200 in 354.8565 ms
+2026-06-06 23:24:02.066 +05:30 [INF] HTTP POST /api/orders responded 201 in 776.8398 ms
+2026-06-06 23:24:02.917 +05:30 [INF] HTTP POST /api/payment/create-order responded 200 in 519.3846 ms
+2026-06-06 23:27:54.253 +05:30 [INF] HTTP POST /api/payment/verify responded 200 in 34.5669 ms
+2026-06-06 23:27:59.521 +05:30 [INF] HTTP GET /api/categories responded 200 in 20.0924 ms
+2026-06-06 23:27:59.536 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.4894 ms
+2026-06-06 23:27:59.868 +05:30 [INF] HTTP GET /api/products responded 200 in 15.3329 ms
+2026-06-06 23:28:00.186 +05:30 [INF] HTTP GET /api/products responded 200 in 2.3796 ms
+2026-06-06 23:28:02.469 +05:30 [INF] HTTP GET /api/products responded 200 in 19.7439 ms
+2026-06-06 23:28:02.485 +05:30 [INF] HTTP GET /api/products responded 200 in 3.2118 ms
+2026-06-06 23:28:03.645 +05:30 [INF] HTTP GET /api/orders responded 200 in 1211.8432 ms
+2026-06-06 23:28:04.838 +05:30 [INF] HTTP GET /api/orders responded 200 in 1166.3841 ms
+2026-06-06 23:28:08.088 +05:30 [INF] HTTP GET /api/orders/11 responded 200 in 571.5088 ms
+2026-06-06 23:28:23.699 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.9131 ms
+2026-06-06 23:28:24.012 +05:30 [INF] HTTP GET /api/categories responded 200 in 1.6033 ms
+2026-06-06 23:28:24.046 +05:30 [INF] HTTP GET /api/products responded 200 in 2.1743 ms
+2026-06-06 23:28:24.359 +05:30 [INF] HTTP GET /api/products responded 200 in 3.0031 ms
+2026-06-06 23:28:43.540 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 8.1557 ms
+2026-06-06 23:28:43.553 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 3.7000 ms
+2026-06-06 23:28:43.801 +05:30 [INF] HTTP GET /api/products responded 200 in 2.4320 ms
+2026-06-06 23:28:43.875 +05:30 [INF] HTTP GET /api/products responded 200 in 11.9688 ms
+2026-06-06 23:28:46.378 +05:30 [INF] HTTP GET /api/products responded 200 in 3.2128 ms
+2026-06-06 23:28:46.697 +05:30 [INF] HTTP GET /api/products responded 200 in 2.9631 ms
+2026-06-06 23:28:47.774 +05:30 [INF] HTTP GET /api/orders responded 200 in 1094.3728 ms
+2026-06-06 23:28:49.336 +05:30 [INF] HTTP GET /api/orders responded 200 in 1293.0368 ms
+2026-06-06 23:28:54.273 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 1.3825 ms
+2026-06-06 23:28:54.410 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 0.3595 ms
+2026-06-06 23:28:54.444 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 0.5256 ms
+2026-06-06 23:28:54.534 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 2.0663 ms
+2026-06-06 23:32:41.783 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 179.7048 ms
+2026-06-06 23:32:41.884 +05:30 [INF] HTTP GET /api/wishlist responded 200 in 13.3692 ms
+2026-06-06 23:32:42.120 +05:30 [INF] HTTP GET /api/wishlist/ids responded 200 in 2.9147 ms
+2026-06-06 23:32:42.948 +05:30 [INF] HTTP GET /api/categories responded 200 in 14.1980 ms
+2026-06-06 23:32:43.276 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.9415 ms
+2026-06-06 23:32:43.300 +05:30 [INF] HTTP GET /api/products responded 200 in 24.6637 ms
+2026-06-06 23:32:43.614 +05:30 [INF] HTTP GET /api/products responded 200 in 3.6949 ms
+2026-06-06 23:32:46.891 +05:30 [INF] HTTP GET /api/products responded 200 in 7.6223 ms
+2026-06-06 23:32:46.908 +05:30 [INF] HTTP GET /api/products responded 200 in 5.6415 ms
+2026-06-06 23:32:46.936 +05:30 [INF] HTTP GET /api/orders responded 200 in 35.3995 ms
+2026-06-06 23:32:47.153 +05:30 [INF] HTTP GET /api/orders responded 200 in 5.0039 ms
+2026-06-06 23:32:49.772 +05:30 [INF] HTTP GET /api/categories responded 200 in 5.6388 ms
+2026-06-06 23:32:50.089 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.2745 ms
+2026-06-06 23:32:50.093 +05:30 [INF] HTTP GET /api/products responded 200 in 5.2734 ms
+2026-06-06 23:32:50.103 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.2586 ms
+2026-06-06 23:32:50.426 +05:30 [INF] HTTP GET /api/products responded 200 in 4.9309 ms
+2026-06-06 23:32:50.567 +05:30 [INF] HTTP GET /api/users/admin/all responded 200 in 145.1521 ms
+2026-06-06 23:32:50.746 +05:30 [INF] HTTP GET /api/products responded 200 in 4.3099 ms
+2026-06-06 23:32:50.890 +05:30 [INF] HTTP GET /api/users/admin/all responded 200 in 6.8593 ms
+2026-06-06 23:32:51.218 +05:30 [INF] HTTP GET /api/users/admin/all responded 200 in 12.9969 ms
+2026-06-06 23:32:53.122 +05:30 [INF] HTTP GET /api/orders/admin/all responded 200 in 2238.2083 ms
+2026-06-06 23:32:55.360 +05:30 [INF] HTTP GET /api/orders/admin/all responded 200 in 1970.7776 ms
+2026-06-06 23:32:57.393 +05:30 [INF] HTTP GET /api/orders/admin/all responded 200 in 1758.6923 ms
+2026-06-06 23:33:09.176 +05:30 [INF] HTTP GET /api/categories responded 200 in 1.9005 ms
+2026-06-06 23:33:10.599 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.3939 ms
+2026-06-06 23:33:10.600 +05:30 [INF] HTTP GET /api/products responded 200 in 3.1355 ms
+2026-06-06 23:33:25.142 +05:30 [INF] HTTP GET /api/categories responded 200 in 29.7850 ms
+2026-06-06 23:33:25.166 +05:30 [INF] HTTP GET /api/products responded 200 in 13.9251 ms
+2026-06-06 23:33:25.392 +05:30 [INF] HTTP GET /api/users/admin/all responded 200 in 14.2882 ms
+2026-06-06 23:33:27.564 +05:30 [INF] HTTP GET /api/orders/admin/all responded 200 in 2074.6965 ms

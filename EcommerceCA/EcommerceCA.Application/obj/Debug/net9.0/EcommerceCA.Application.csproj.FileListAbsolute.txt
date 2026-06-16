@@ -1,0 +1,51 @@
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Application.deps.json
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Application.dll
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Application.pdb
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Common.dll
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Domain.dll
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Domain.pdb
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Common.pdb
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.csproj.AssemblyReference.cache
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.AssemblyInfoInputs.cache
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.AssemblyInfo.cs
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.csproj.CoreCompileInputs.cache
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\Ecommerc.FFD87B85.Up2Date
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.dll
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\refint\EcommerceCA.Application.dll
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.pdb
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\ref\EcommerceCA.Application.dll
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Application.deps.json
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Application.dll
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Application.pdb
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Common.dll
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Domain.dll
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Domain.pdb
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Common.pdb
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.csproj.AssemblyReference.cache
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.AssemblyInfoInputs.cache
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.AssemblyInfo.cs
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.csproj.CoreCompileInputs.cache
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\Ecommerc.FFD87B85.Up2Date
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.dll
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\refint\EcommerceCA.Application.dll
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.pdb
+D:\Project\New folder (2)\EcommerceCA (1)\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\ref\EcommerceCA.Application.dll
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Application.deps.json
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Application.dll
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Application.pdb
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Common.dll
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Domain.dll
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Domain.pdb
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\bin\Debug\net9.0\EcommerceCA.Common.pdb
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.csproj.AssemblyReference.cache
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.AssemblyInfoInputs.cache
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.AssemblyInfo.cs
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.csproj.CoreCompileInputs.cache
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\Ecommerc.FFD87B85.Up2Date
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.dll
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\refint\EcommerceCA.Application.dll
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.pdb
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\ref\EcommerceCA.Application.dll

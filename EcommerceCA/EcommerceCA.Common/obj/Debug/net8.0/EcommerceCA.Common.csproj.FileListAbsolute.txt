@@ -1,0 +1,12 @@
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\bin\Debug\net8.0\EcommerceCA.Common.deps.json
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\bin\Debug\net8.0\EcommerceCA.Common.dll
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\bin\Debug\net8.0\EcommerceCA.Common.pdb
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\obj\Debug\net8.0\EcommerceCA.Common.csproj.AssemblyReference.cache
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\obj\Debug\net8.0\EcommerceCA.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\obj\Debug\net8.0\EcommerceCA.Common.AssemblyInfoInputs.cache
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\obj\Debug\net8.0\EcommerceCA.Common.AssemblyInfo.cs
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\obj\Debug\net8.0\EcommerceCA.Common.csproj.CoreCompileInputs.cache
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\obj\Debug\net8.0\EcommerceCA.Common.dll
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\obj\Debug\net8.0\refint\EcommerceCA.Common.dll
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\obj\Debug\net8.0\EcommerceCA.Common.pdb
+D:\progarams\dot_net\EcommerceCA (1)\EcommerceCA\EcommerceCA.Common\obj\Debug\net8.0\ref\EcommerceCA.Common.dll

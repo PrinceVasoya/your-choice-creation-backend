@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EcommerceCA.API</name>
+    </assembly>
+    <members>
+        <member name="T:EcommerceCA.API.Controllers.AuthController">
+            <summary>Authentication — register, login, token refresh, password management</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.AuthController.Register(EcommerceCA.Application.DTOs.Auth.RegisterRequestDto)">
+            <summary>Register a new user account</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.AuthController.Login(EcommerceCA.Application.DTOs.Auth.LoginRequestDto)">
+            <summary>Login with email and password</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.AuthController.RefreshToken(EcommerceCA.Application.DTOs.Auth.RefreshTokenRequestDto)">
+            <summary>Get a new access token using a refresh token</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.AuthController.ForgotPassword(EcommerceCA.Application.DTOs.Auth.ForgotPasswordRequestDto)">
+            <summary>Send a password reset link to the given email</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.AuthController.ResetPassword(EcommerceCA.Application.DTOs.Auth.ResetPasswordRequestDto)">
+            <summary>Reset password using the token received by email</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.AuthController.ChangePassword(EcommerceCA.Application.DTOs.Auth.ChangePasswordRequestDto)">
+            <summary>Change password for the currently logged-in user</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.AuthController.Logout(EcommerceCA.Application.DTOs.Auth.RefreshTokenRequestDto)">
+            <summary>Logout and revoke the refresh token</summary>
+        </member>
+        <member name="T:EcommerceCA.API.Controllers.CartController">
+            <summary>Shopping cart — add, update, remove items and view cart</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.CartController.GetCart">
+            <summary>Get the current user's cart</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.CartController.AddItem(EcommerceCA.Application.DTOs.Cart.AddToCartDto)">
+            <summary>Add a product (or variant) to the cart</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.CartController.UpdateItem(System.Int32,EcommerceCA.Application.DTOs.Cart.UpdateCartItemDto)">
+            <summary>Update the quantity of a cart item</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.CartController.RemoveItem(System.Int32)">
+            <summary>Remove a specific item from the cart</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.CartController.ClearCart">
+            <summary>Clear all items from the cart</summary>
+        </member>
+        <member name="T:EcommerceCA.API.Controllers.CategoryController">
+            <summary>Category management — CRUD + image upload</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.CategoryController.GetAll">
+            <summary>Get all active categories</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.CategoryController.GetById(System.Int32)">
+            <summary>Get a single category by ID</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.CategoryController.Create(EcommerceCA.Application.DTOs.Category.CreateCategoryDto)">
+            <summary>Create a new category with optional image upload — Admin only</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.CategoryController.Update(System.Int32,EcommerceCA.Application.DTOs.Category.UpdateCategoryDto)">
+            <summary>Update an existing category — Admin only</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.CategoryController.Delete(System.Int32)">
+            <summary>Delete a category — Admin only (cannot delete if it has active products)</summary>
+        </member>
+        <member name="T:EcommerceCA.API.Controllers.OrderController">
+            <summary>Order management — place orders, view history, admin status updates</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.OrderController.PlaceOrder(EcommerceCA.Application.DTOs.Order.PlaceOrderDto)">
+            <summary>Place a new order from the current user's cart</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.OrderController.GetMyOrders(System.Int32,System.Int32)">
+            <summary>Get the current user's order history (paginated)</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.OrderController.GetById(System.Int32)">
+            <summary>Get details of a specific order (must belong to the current user)</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.OrderController.CancelOrder(System.Int32)">
+            <summary>Cancel a specific order (must belong to the current user and status must be Pending or Confirmed)</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.OrderController.ReturnOrder(System.Int32)">
+            <summary>Return a specific order (must belong to the current user and status must be Delivered)</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.OrderController.GetAllOrders(System.Int32,System.Int32,System.String)">
+            <summary>Get all orders — Admin only. Filter by status: Pending | Confirmed | Shipped …</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.OrderController.GetAdminOrderById(System.Int32)">
+            <summary>Get details of any order — Admin only</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.OrderController.UpdateStatus(System.Int32,EcommerceCA.Application.DTOs.Order.UpdateOrderStatusDto)">
+            <summary>Update order status — Admin only</summary>
+        </member>
+        <member name="T:EcommerceCA.API.Controllers.PaymentController">
+            <summary>Payment processing — Stripe and Razorpay flows</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.PaymentController.CreateStripeIntent(System.Int32)">
+            <summary>
+            Create a Stripe PaymentIntent for the given order.
+            Returns clientSecret to be used by the frontend Stripe.js SDK.
+            </summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.PaymentController.ConfirmStripePayment(EcommerceCA.Application.DTOs.Payment.ConfirmPaymentDto)">
+            <summary>
+            Confirm Stripe payment after the frontend completes the payment.
+            Marks order as Confirmed.
+            </summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.PaymentController.CreateRazorpayOrder(System.Int32)">
+            <summary>
+            Create a Razorpay order for the given application order.
+            Returns the Razorpay order object to be used by the frontend Razorpay SDK.
+            </summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.PaymentController.ConfirmRazorpayPayment(EcommerceCA.Application.DTOs.Payment.ConfirmPaymentDto)">
+            <summary>
+            Confirm Razorpay payment after the frontend completes checkout.
+            Marks order as Confirmed.
+            </summary>
+        </member>
+        <member name="T:EcommerceCA.API.Controllers.ProductController">
+            <summary>Product management — CRUD, pagination, filtering, sorting, variants</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.ProductController.GetAll(EcommerceCA.Application.DTOs.Product.ProductQueryParams)">
+            <summary>
+            Get all products with pagination, filtering, and sorting.
+            Supports: search, categoryId, minPrice, maxPrice, isCustomizable, inStock,
+            sortBy (price|name|createdAt), sortOrder (asc|desc)
+            </summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.ProductController.GetById(System.Int32)">
+            <summary>Get a single product with its variants</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.ProductController.Create(EcommerceCA.Application.DTOs.Product.CreateProductDto)">
+            <summary>Create a new product with optional image and variants — Admin only</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.ProductController.Update(System.Int32,EcommerceCA.Application.DTOs.Product.UpdateProductDto)">
+            <summary>Update an existing product — Admin only</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.ProductController.Delete(System.Int32)">
+            <summary>Soft-delete a product (sets IsActive = false) — Admin only</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.ProductController.AddVariant(System.Int32,EcommerceCA.Application.DTOs.Product.CreateProductVariantDto)">
+            <summary>Add a size/color variant to a product — Admin only</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.ProductController.DeleteVariant(System.Int32)">
+            <summary>Soft-delete a product variant — Admin only</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.ProductController.UploadImage(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>Upload a single product image — Admin only</summary>
+        </member>
+        <member name="T:EcommerceCA.API.Controllers.UserController">
+            <summary>User profile, addresses, and admin user management</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.UserController.GetProfile">
+            <summary>Get the current user's profile</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.UserController.UpdateProfile(EcommerceCA.Application.DTOs.User.UpdateProfileDto)">
+            <summary>Update the current user's profile (name, phone, avatar)</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.UserController.GetAddresses">
+            <summary>Get all saved addresses for the current user</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.UserController.AddAddress(EcommerceCA.Application.DTOs.User.CreateAddressDto)">
+            <summary>Add a new shipping address</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.UserController.DeleteAddress(System.Int32)">
+            <summary>Delete a saved address</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.UserController.GetAllUsers">
+            <summary>Get all registered users — Admin only</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.UserController.AssignRole(EcommerceCA.Application.DTOs.User.AssignRoleDto)">
+            <summary>Assign a role (Admin | User) to a user — Admin only</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.UserController.ToggleStatus(System.String)">
+            <summary>Activate or deactivate a user account — Admin only</summary>
+        </member>
+        <member name="T:EcommerceCA.API.Controllers.WishlistController">
+            <summary>User wishlist management — add, remove, and retrieve saved items</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.WishlistController.GetWishlist">
+            <summary>Get the current user's wishlist products</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.WishlistController.GetWishlistProductIds">
+            <summary>Get a list of product IDs in the current user's wishlist</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.WishlistController.AddToWishlist(EcommerceCA.API.Controllers.AddWishlistRequestDto)">
+            <summary>Add a product to the user's wishlist</summary>
+        </member>
+        <member name="M:EcommerceCA.API.Controllers.WishlistController.RemoveFromWishlist(System.Int32)">
+            <summary>Remove a product from the user's wishlist</summary>
+        </member>
+    </members>
+</doc>

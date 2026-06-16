@@ -1,0 +1,8 @@
+2026-06-11 12:50:23.744 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 276.3332 ms
+2026-06-11 12:50:23.977 +05:30 [INF] HTTP GET /api/wishlist responded 401 in 3.2275 ms
+2026-06-11 12:50:23.983 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 2.1946 ms
+2026-06-11 12:50:24.028 +05:30 [INF] HTTP GET /api/wishlist/ids responded 401 in 2.1903 ms
+2026-06-11 12:50:26.147 +05:30 [INF] HTTP GET /api/categories responded 200 in 2679.4891 ms
+2026-06-11 12:50:26.717 +05:30 [INF] HTTP GET /api/categories responded 200 in 128.4016 ms
+2026-06-11 12:50:27.130 +05:30 [INF] HTTP GET /api/products responded 200 in 497.1877 ms
+2026-06-11 12:50:27.624 +05:30 [INF] HTTP GET /api/products responded 200 in 97.0675 ms

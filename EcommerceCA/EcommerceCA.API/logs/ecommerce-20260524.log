@@ -1,0 +1,31 @@
+2026-05-24 10:16:38.433 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-05-24 10:18:21.496 +05:30 [INF] HTTP GET /api/products responded 307 in 159.4172 ms
+2026-05-24 11:02:45.846 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-05-24 11:05:35.068 +05:30 [INF] HTTP GET /api/categories responded 307 in 32.2470 ms
+2026-05-24 11:05:51.055 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-05-24 11:05:51.323 +05:30 [INF] HTTP GET /api/categories responded 200 in 1875.6380 ms
+2026-05-24 11:33:05.728 +05:30 [INF] HTTP GET /api/categories responded 200 in 150.9210 ms
+2026-05-24 11:33:05.770 +05:30 [INF] HTTP GET /api/categories responded 200 in 26.2318 ms
+2026-05-24 11:33:05.995 +05:30 [INF] HTTP GET /api/products responded 200 in 250.3998 ms
+2026-05-24 11:33:06.045 +05:30 [INF] HTTP GET /api/products responded 200 in 35.0710 ms
+2026-05-24 11:33:11.426 +05:30 [INF] HTTP GET /api/categories responded 200 in 13.4855 ms
+2026-05-24 11:33:11.664 +05:30 [INF] HTTP GET /api/categories responded 200 in 3.0312 ms
+2026-05-24 11:33:11.758 +05:30 [INF] HTTP GET /api/products responded 200 in 17.7492 ms
+2026-05-24 11:33:11.774 +05:30 [INF] HTTP GET /api/products responded 200 in 7.3536 ms
+2026-05-24 11:33:18.295 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 57.7767 ms
+2026-05-24 11:33:18.517 +05:30 [INF] HTTP GET /api/products/9 responded 200 in 2.9494 ms
+2026-05-24 11:33:18.613 +05:30 [INF] HTTP GET /api/products responded 200 in 3.7377 ms
+2026-05-24 11:33:18.628 +05:30 [INF] HTTP GET /api/products responded 200 in 5.8628 ms
+2026-05-24 11:33:39.859 +05:30 [INF] HTTP GET /api/categories responded 200 in 12.9515 ms
+2026-05-24 11:33:40.113 +05:30 [INF] HTTP GET /api/categories responded 200 in 2.0873 ms
+2026-05-24 11:33:40.192 +05:30 [INF] HTTP GET /api/products responded 200 in 15.9093 ms
+2026-05-24 11:33:40.207 +05:30 [INF] HTTP GET /api/products responded 200 in 6.8688 ms
+2026-05-24 11:36:06.990 +05:30 [INF] HTTP GET /api/categories responded 200 in 10.2819 ms
+2026-05-24 11:36:07.109 +05:30 [INF] HTTP GET /api/products responded 200 in 15.5332 ms
+2026-05-24 11:36:07.644 +05:30 [INF] HTTP POST /api/auth/register responded 201 in 492.0808 ms
+2026-05-24 11:36:07.754 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 94.6950 ms
+2026-05-24 11:36:07.911 +05:30 [INF] HTTP GET /api/cart responded 200 in 135.5432 ms
+2026-05-24 11:36:08.034 +05:30 [INF] HTTP POST /api/cart/items responded 200 in 87.4438 ms
+2026-05-24 11:36:08.051 +05:30 [INF] HTTP GET /api/cart responded 200 in 5.1488 ms
+2026-05-24 11:36:08.096 +05:30 [INF] HTTP DELETE /api/cart responded 200 in 33.2120 ms
+2026-05-24 11:36:08.109 +05:30 [INF] HTTP GET /api/cart responded 200 in 2.9979 ms
