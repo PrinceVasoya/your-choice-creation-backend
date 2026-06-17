@@ -1,0 +1,19 @@
+# Build folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.userossc
+*.sln.docstates
+
+# Visual Studio cache and settings
+.vs/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+
+# Local configuration files
+appsettings.Development.json

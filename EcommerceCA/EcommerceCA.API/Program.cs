@@ -2,6 +2,7 @@ using EcommerceCA.API.Extensions;
 using EcommerceCA.API.Middleware;
 using EcommerceCA.Infrastructure.Data;
 using EcommerceCA.Infrastructure.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 // ── Bootstrap logger ───────────────────────────────────────────────────────────
@@ -84,7 +85,7 @@ try
 
     var app = builder.Build();
 
-    // ── Auto-migrate on startup (development only) ─────────────────────────────
+    // ── Auto-migrate on startup ─────────────────────────────────────────────
     if (app.Environment.IsDevelopment())
     {
         try
@@ -97,6 +98,20 @@ try
         catch (Exception ex)
         {
             Log.Warning(ex, "Failed to initialize and seed database. Proceeding with application startup.");
+        }
+    }
+    else
+    {
+        try
+        {
+            using var scope = app.Services.CreateScope();
+            var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+            db.Database.Migrate();
+        }
+        catch (Exception ex)
+        {
+            Log.Fatal(ex, "Failed to apply database migrations in Production.");
+            throw;
         }
     }
 
