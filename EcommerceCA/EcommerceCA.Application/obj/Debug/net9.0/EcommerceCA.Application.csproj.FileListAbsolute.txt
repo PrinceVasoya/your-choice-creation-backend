@@ -49,3 +49,4 @@ D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\
 D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\refint\EcommerceCA.Application.dll
 D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.pdb
 D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\ref\EcommerceCA.Application.dll
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Application\obj\Debug\net9.0\EcommerceCA.Application.sourcelink.json

@@ -61,3 +61,4 @@ D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Infrastructu
 D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Infrastructure\obj\Debug\net9.0\EcommerceCA.Infrastructure.pdb
 D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Infrastructure\obj\Debug\net9.0\EcommerceCA.Infrastructure.genruntimeconfig.cache
 D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Infrastructure\obj\Debug\net9.0\ref\EcommerceCA.Infrastructure.dll
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Infrastructure\obj\Debug\net9.0\EcommerceCA.Infrastructure.sourcelink.json

@@ -30,18 +30,9 @@ public static class ServiceRegistration
     public static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration config)
     {
         var conn     = config.GetConnectionString("DefaultConnection");
-        var provider = config["DatabaseProvider"] ?? "PostgreSQL";
         
-        if (provider.Equals("SqlServer", StringComparison.OrdinalIgnoreCase))
-        {
-            services.AddDbContext<ApplicationDbContext>(o => o.UseSqlServer(conn)
-                .ConfigureWarnings(w => w.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.PendingModelChangesWarning)));
-        }
-        else
-        {
-            services.AddDbContext<ApplicationDbContext>(o => o.UseNpgsql(conn)
-                .ConfigureWarnings(w => w.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.PendingModelChangesWarning)));
-        }
+        services.AddDbContext<ApplicationDbContext>(o => o.UseNpgsql(conn)
+            .ConfigureWarnings(w => w.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.PendingModelChangesWarning)));
             
         return services;
     }

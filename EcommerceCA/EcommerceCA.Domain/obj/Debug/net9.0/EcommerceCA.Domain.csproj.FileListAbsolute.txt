@@ -34,3 +34,4 @@ D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Domain\obj\D
 D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Domain\obj\Debug\net9.0\refint\EcommerceCA.Domain.dll
 D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Domain\obj\Debug\net9.0\EcommerceCA.Domain.pdb
 D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Domain\obj\Debug\net9.0\ref\EcommerceCA.Domain.dll
+D:\Project\New folder (2)\ycc-server-csharp\EcommerceCA\EcommerceCA.Domain\obj\Debug\net9.0\EcommerceCA.Domain.sourcelink.json

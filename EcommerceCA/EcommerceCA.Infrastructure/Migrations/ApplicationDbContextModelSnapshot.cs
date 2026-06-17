@@ -17,7 +17,7 @@ namespace EcommerceCA.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.15")
+                .HasAnnotation("ProductVersion", "9.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -174,7 +174,7 @@ namespace EcommerceCA.Infrastructure.Migrations
                         {
                             Id = "seed-user-admin",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c70c549d-5b38-4658-856a-cc77ef1275bb",
+                            ConcurrencyStamp = "6b41aa77-3c51-4a32-8852-dd7d3a6d60a6",
                             CreatedAt = new DateTime(2026, 5, 29, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "admin@yourstore.com",
                             EmailConfirmed = true,
@@ -184,7 +184,7 @@ namespace EcommerceCA.Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@YOURSTORE.COM",
                             NormalizedUserName = "ADMIN@YOURSTORE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAECRgznBctL1AqAIi5PY80yIRlpe/hfR5xm4sYW64WZ5k+2bmG2CkEaixSkB4rCuA5Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEB+MejcGkcj//FimMwfeWk9fgDDeTCVaMo0HDXWPlPJe9ar8x5LITW7FL26wqton1w==",
                             PhoneNumber = "9999999999",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "seed-security-stamp",

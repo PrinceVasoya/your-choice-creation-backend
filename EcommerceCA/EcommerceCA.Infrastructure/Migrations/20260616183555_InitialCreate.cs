@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EcommerceCA.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialPostgres : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -498,7 +498,7 @@ namespace EcommerceCA.Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "IsActive", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfileImageUrl", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName" },
-                values: new object[] { "seed-user-admin", 0, "c70c549d-5b38-4658-856a-cc77ef1275bb", new DateTime(2026, 5, 29, 0, 0, 0, 0, DateTimeKind.Utc), "admin@yourstore.com", true, "Super", true, "Admin", false, null, "ADMIN@YOURSTORE.COM", "ADMIN@YOURSTORE.COM", "AQAAAAIAAYagAAAAECRgznBctL1AqAIi5PY80yIRlpe/hfR5xm4sYW64WZ5k+2bmG2CkEaixSkB4rCuA5Q==", "9999999999", false, null, "seed-security-stamp", false, new DateTime(2026, 5, 29, 0, 0, 0, 0, DateTimeKind.Utc), "admin@yourstore.com" });
+                values: new object[] { "seed-user-admin", 0, "6b41aa77-3c51-4a32-8852-dd7d3a6d60a6", new DateTime(2026, 5, 29, 0, 0, 0, 0, DateTimeKind.Utc), "admin@yourstore.com", true, "Super", true, "Admin", false, null, "ADMIN@YOURSTORE.COM", "ADMIN@YOURSTORE.COM", "AQAAAAIAAYagAAAAEB+MejcGkcj//FimMwfeWk9fgDDeTCVaMo0HDXWPlPJe9ar8x5LITW7FL26wqton1w==", "9999999999", false, null, "seed-security-stamp", false, new DateTime(2026, 5, 29, 0, 0, 0, 0, DateTimeKind.Utc), "admin@yourstore.com" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
