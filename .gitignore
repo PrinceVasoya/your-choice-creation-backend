@@ -17,3 +17,26 @@ build/
 
 # Local configuration files
 appsettings.Development.json
+appsettings.Production.json
+appsettings.Local.json
+
+# Publish folders
+publish/
+PublishProfiles/
+*.publishsettings
+*.PublishSettings
+
+# Logs
+*.log
+logs/
+
+# Uploaded images
+wwwroot/uploads/
+wwwroot/images/products/
+
+# Databases
+*.db
+*.bak
+*.mdf
+*.ldf
+
