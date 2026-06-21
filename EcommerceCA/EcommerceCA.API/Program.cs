@@ -119,16 +119,13 @@ try
     app.UseMiddleware<ExceptionMiddleware>();   // Global exception handler — must be first
     app.UseSerilogRequestLogging();
 
-    if (app.Environment.IsDevelopment())
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
     {
-        app.UseSwagger();
-        app.UseSwaggerUI(c =>
-        {
-            c.SwaggerEndpoint("/swagger/v1/swagger.json", "EcommerceCA API v1");
-            c.RoutePrefix        = string.Empty;   // Swagger at root URL
-            c.DisplayRequestDuration();
-        });
-    }
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "EcommerceCA API v1");
+        c.RoutePrefix        = "swagger";   // Swagger at /swagger
+        c.DisplayRequestDuration();
+    });
 
     app.UseStaticFiles();
     app.UseHttpsRedirection();
