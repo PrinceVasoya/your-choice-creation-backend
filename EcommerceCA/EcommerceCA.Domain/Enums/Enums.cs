@@ -22,7 +22,6 @@ public enum PaymentStatus
 
 public enum PaymentMethod
 {
-    Stripe,
     Razorpay,
     CashOnDelivery
 }

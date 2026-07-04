@@ -8,12 +8,8 @@ public class ConfirmPaymentDto
     public string? RazorpaySignature  { get; set; }
 }
 
-// ── Responses ─────────────────────────────────────────────────────────────────
-public class StripePaymentIntentResponseDto
-{
-    public string ClientSecret    { get; set; } = string.Empty;
-    public string PaymentIntentId { get; set; } = string.Empty;
-}
+
+
 
 public class PaymentResponseDto
 {

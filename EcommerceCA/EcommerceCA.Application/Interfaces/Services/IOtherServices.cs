@@ -7,10 +7,8 @@ namespace EcommerceCA.Application.Interfaces.Services;
 
 public interface IPaymentService
 {
-    Task<StripePaymentIntentResponseDto> CreateStripePaymentIntentAsync(int orderId);
-    Task                                 ConfirmStripePaymentAsync(ConfirmPaymentDto dto);
-    Task<object>                         CreateRazorpayOrderAsync(int orderId);
-    Task                                 ConfirmRazorpayPaymentAsync(ConfirmPaymentDto dto);
+    Task<object> CreateRazorpayOrderAsync(int orderId);
+    Task         ConfirmRazorpayPaymentAsync(ConfirmPaymentDto dto);
 }
 
 public interface IUserService

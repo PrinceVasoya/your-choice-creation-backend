@@ -15,7 +15,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using MimeKit;
-using Stripe;
+
 using System.Net.Http.Json;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
@@ -129,28 +129,6 @@ public class PaymentService : IPaymentService
     public PaymentService(IPaymentRepository paymentRepo, IOrderRepository orderRepo, IConfiguration config)
     {
         _paymentRepo = paymentRepo; _orderRepo = orderRepo; _config = config;
-        StripeConfiguration.ApiKey = config["Stripe:SecretKey"];
-    }
-
-    public async Task<StripePaymentIntentResponseDto> CreateStripePaymentIntentAsync(int orderId)
-    {
-        var order  = await _orderRepo.GetWithDetailsAsync(orderId) ?? throw new NotFoundException("Order", orderId);
-        var intent = await new PaymentIntentService().CreateAsync(new PaymentIntentCreateOptions
-        {
-            Amount = (long)(order.TotalAmount * 100), Currency = "inr",
-            Metadata = new Dictionary<string, string> { ["orderId"] = orderId.ToString() }
-        });
-        var payment = await _paymentRepo.GetByOrderIdAsync(orderId);
-        if (payment != null) { payment.PaymentIntentId = intent.Id; await _paymentRepo.SaveChangesAsync(); }
-        return new StripePaymentIntentResponseDto { ClientSecret = intent.ClientSecret, PaymentIntentId = intent.Id };
-    }
-
-    public async Task ConfirmStripePaymentAsync(ConfirmPaymentDto dto)
-    {
-        var payment = await _paymentRepo.GetByOrderIdAsync(dto.OrderId) ?? throw new NotFoundException("Payment", dto.OrderId);
-        payment.TransactionId = dto.TransactionId; payment.Status = PaymentStatus.Success;
-        payment.UpdatedAt = DateTime.UtcNow; payment.Order.Status = OrderStatus.Confirmed; payment.Order.UpdatedAt = DateTime.UtcNow;
-        await _paymentRepo.SaveChangesAsync();
     }
 
     public async Task<object> CreateRazorpayOrderAsync(int orderId)
@@ -173,6 +151,7 @@ public class PaymentService : IPaymentService
         await _paymentRepo.SaveChangesAsync();
     }
 }
+
 
 // ── WhatsApp Service ───────────────────────────────────────────────────────────
 public class WhatsAppService : IWhatsAppService
