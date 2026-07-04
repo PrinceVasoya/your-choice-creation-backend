@@ -101,6 +101,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityR
             e.Property(o => o.ShippingCost).HasColumnType("decimal(18,2)");
             e.Property(o => o.TaxAmount).HasColumnType("decimal(18,2)");
             e.Property(o => o.TotalAmount).HasColumnType("decimal(18,2)");
+            e.Property(o => o.GrandTotal).HasColumnType("decimal(18,2)");
             e.Property(o => o.Status).HasConversion<string>();
             e.HasMany(o => o.OrderItems).WithOne(oi => oi.Order)
                 .HasForeignKey(oi => oi.OrderId).OnDelete(DeleteBehavior.Cascade);
@@ -180,12 +181,12 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityR
             PhoneNumber = "9999999999",
             EmailConfirmed = true,
             SecurityStamp = "seed-security-stamp",
+            ConcurrencyStamp = "seed-concurrency-stamp",
             CreatedAt = new DateTime(2026, 5, 29, 0, 0, 0, DateTimeKind.Utc),
             UpdatedAt = new DateTime(2026, 5, 29, 0, 0, 0, DateTimeKind.Utc)
         };
 
-        var passwordHasher = new PasswordHasher<ApplicationUser>();
-        adminUser.PasswordHash = passwordHasher.HashPassword(adminUser, "Admin@1234");
+        adminUser.PasswordHash = "AQAAAAIAAYagAAAAEGSwk2grLuyQCyk8zt1BJ/FMmpsyiobc0jS4F3no0KDF9sWHAy9RYF4thm1/U6YG0Q==";
 
         builder.Entity<ApplicationUser>().HasData(adminUser);
 

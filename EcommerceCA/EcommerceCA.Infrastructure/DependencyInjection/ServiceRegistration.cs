@@ -34,13 +34,11 @@ public static class ServiceRegistration
         
         if (provider.Equals("SqlServer", StringComparison.OrdinalIgnoreCase))
         {
-            services.AddDbContext<ApplicationDbContext>(o => o.UseSqlServer(conn)
-                .ConfigureWarnings(w => w.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.PendingModelChangesWarning)));
+            services.AddDbContext<ApplicationDbContext>(o => o.UseSqlServer(conn));
         }
         else
         {
-            services.AddDbContext<ApplicationDbContext>(o => o.UseNpgsql(conn)
-                .ConfigureWarnings(w => w.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.PendingModelChangesWarning)));
+            services.AddDbContext<ApplicationDbContext>(o => o.UseNpgsql(conn));
         }
             
         return services;

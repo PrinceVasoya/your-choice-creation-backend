@@ -100,15 +100,11 @@ public static class ServiceExtensions
         return services;
     }
 
-    // ── CORS ───────────────────────────────────────────────────────────────────
     public static IServiceCollection AddCorsPolicy(this IServiceCollection services, IConfiguration config)
     {
-        var origins = config.GetSection("Cors:AllowedOrigins").Get<string[]>()
-            ?? new[] { "http://localhost:3000", "http://localhost:5173" };
-
         services.AddCors(options =>
             options.AddPolicy("ReactApp", policy =>
-                policy.WithOrigins(origins)
+                policy.SetIsOriginAllowed(origin => true) // Dynamically allow any origin (supports AllowCredentials)
                       .AllowAnyHeader()
                       .AllowAnyMethod()
                       .AllowCredentials()));

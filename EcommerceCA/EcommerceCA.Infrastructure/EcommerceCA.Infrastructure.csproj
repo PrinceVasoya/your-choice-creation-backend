@@ -3,6 +3,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <NoWarn>$(NoWarn);NU1903;NU1902;NU1701;CS8618</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\EcommerceCA.Application\EcommerceCA.Application.csproj" />
@@ -25,6 +26,6 @@
     <PackageReference Include="CloudinaryDotNet" Version="1.28.0" />
     <PackageReference Include="Stripe.net" Version="51.0.0" />
     <PackageReference Include="Twilio" Version="7.14.7" />
-    <PackageReference Include="MailKit" Version="4.16.0" />
+    <PackageReference Include="MailKit" Version="4.11.0" />
   </ItemGroup>
 </Project>

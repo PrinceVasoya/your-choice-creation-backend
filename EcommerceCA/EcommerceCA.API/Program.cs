@@ -27,7 +27,7 @@ try
         }
         if (!System.IO.File.Exists(envPath))
         {
-            envPath = System.IO.Path.Combine(currentDir, "../ycc-server/.env");
+            envPath = System.IO.Path.Combine(currentDir, "../mocks/ycc-server-mock/.env");
         }
         if (!System.IO.File.Exists(envPath))
         {
@@ -98,20 +98,6 @@ try
         catch (Exception ex)
         {
             Log.Warning(ex, "Failed to initialize and seed database. Proceeding with application startup.");
-        }
-    }
-    else
-    {
-        try
-        {
-            using var scope = app.Services.CreateScope();
-            var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-            db.Database.Migrate();
-        }
-        catch (Exception ex)
-        {
-            Log.Fatal(ex, "Failed to apply database migrations in Production.");
-            throw;
         }
     }
 
