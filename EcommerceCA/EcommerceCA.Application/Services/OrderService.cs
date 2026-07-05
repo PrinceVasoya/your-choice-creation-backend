@@ -97,12 +97,9 @@ public class OrderService : IOrderService
             subTotal += unitPrice * item.Quantity;
         }
 
-        var shippingCost = subTotal >= AppConstants.FreeShippingThreshold
-            ? 0m
-            : AppConstants.StandardShippingCost;
-
-        var taxAmount   = Math.Round(subTotal * AppConstants.GstRate, 2);
-        var totalAmount = subTotal + shippingCost + taxAmount;
+        var shippingCost = 0m;
+        var taxAmount    = 0m;
+        var totalAmount  = subTotal;
 
         var order = new Order
         {
