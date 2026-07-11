@@ -75,8 +75,13 @@ public class OrderService : IOrderService
             if (!item.Product.IsActive)
                 throw new BadRequestException($"Product '{item.Product.Name}' is no longer available.");
 
-            var unitPrice = (item.Product.DiscountPrice ?? item.Product.Price)
-                            + (item.ProductVariant?.PriceAdjustment ?? 0);
+            // Always charge the lower of Price vs DiscountPrice (matches frontend Math.min logic).
+            // DiscountPrice ?? Price would pick DiscountPrice even if it is higher — causing mismatch.
+            var unitPrice = item.Product.DiscountPrice.HasValue
+                ? Math.Min(item.Product.Price, item.Product.DiscountPrice.Value)
+                : item.Product.Price;
+            // Note: ProductVariant.PriceAdjustment is not used — variants in this project
+            // are label-only (Size/Color names) and do not carry extra price deltas.
 
             var variantParts = new List<string>();
             if (item.ProductVariant?.Size  != null) variantParts.Add($"Size: {item.ProductVariant.Size}");

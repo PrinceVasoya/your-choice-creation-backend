@@ -27,5 +27,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.3" />
   </ItemGroup>
+  <Target Name="AutoPublish" AfterTargets="Build" Condition="'$(OnlyBuild)' != 'true'">
+    <Message Text="Automatically updating publish folder..." Importance="high" />
+    <Exec Command="dotnet publish -c $(Configuration) -o publish --no-build /p:OnlyBuild=true" />
+  </Target>
 </Project>
