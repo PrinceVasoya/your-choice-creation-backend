@@ -56,6 +56,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityR
         {
             e.HasKey(p => p.Id);
             e.Property(p => p.Name).HasMaxLength(200).IsRequired();
+            e.Property(p => p.ProductCode).HasMaxLength(50).IsRequired().HasDefaultValue("TEMP_CODE");
+            e.HasIndex(p => p.ProductCode).IsUnique();
             e.Property(p => p.Description).HasMaxLength(2000);
             e.Property(p => p.Price).HasColumnType("decimal(18,2)").IsRequired();
             e.Property(p => p.DiscountPrice).HasColumnType("decimal(18,2)");

@@ -6,6 +6,7 @@ namespace EcommerceCA.Application.DTOs.Product;
 public class CreateProductDto
 {
     public string     Name           { get; set; } = string.Empty;
+    public string?    ProductCode    { get; set; }
     public string?    Description    { get; set; }
     public decimal    Price          { get; set; }
     public decimal?   DiscountPrice  { get; set; }
@@ -20,6 +21,7 @@ public class CreateProductDto
 public class UpdateProductDto
 {
     public string?    Name           { get; set; }
+    public string?    ProductCode    { get; set; }
     public string?    Description    { get; set; }
     public decimal?   Price          { get; set; }
     public decimal?   DiscountPrice  { get; set; }
@@ -60,10 +62,11 @@ public class ProductResponseDto
 {
     public int      Id             { get; set; }
     public string   Name           { get; set; } = string.Empty;
+    public string   ProductCode    { get; set; } = string.Empty;
     public string?  Description    { get; set; }
     public decimal  Price          { get; set; }
     public decimal? DiscountPrice  { get; set; }
-    public decimal  EffectivePrice => DiscountPrice ?? Price;
+    public decimal  EffectivePrice => DiscountPrice.HasValue ? Math.Min(Price, DiscountPrice.Value) : Price;
     public string?  ImageUrl       { get; set; }
     public int      Stock          { get; set; }
     public bool     IsActive       { get; set; }

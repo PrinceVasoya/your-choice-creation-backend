@@ -10,7 +10,7 @@ public class CreateProductValidator : AbstractValidator<CreateProductDto>
         RuleFor(x => x.Name).NotEmpty().MaximumLength(200);
         RuleFor(x => x.Price).GreaterThan(0).WithMessage("Price must be greater than 0.");
         RuleFor(x => x.DiscountPrice)
-            .LessThan(x => x.Price).WithMessage("Discount price must be less than the regular price.")
+            .GreaterThan(x => x.Price).WithMessage("MRP / Crossed-out price must be greater than Selling Price.")
             .When(x => x.DiscountPrice.HasValue);
         RuleFor(x => x.Stock).GreaterThanOrEqualTo(0).WithMessage("Stock cannot be negative.");
         RuleFor(x => x.CategoryId).GreaterThan(0).WithMessage("A valid category is required.");

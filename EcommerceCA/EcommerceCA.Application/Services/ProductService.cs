@@ -34,6 +34,7 @@ public class ProductService : IProductService
         var product = new Product
         {
             Name           = dto.Name,
+            ProductCode    = string.IsNullOrWhiteSpace(dto.ProductCode) ? GenerateProductCode() : dto.ProductCode.Trim(),
             Description    = dto.Description,
             Price          = dto.Price,
             DiscountPrice  = dto.DiscountPrice,
@@ -101,6 +102,7 @@ public class ProductService : IProductService
             ?? throw new NotFoundException("Product", id);
 
         if (dto.Name != null)           product.Name           = dto.Name;
+        if (dto.ProductCode != null)    product.ProductCode    = dto.ProductCode.Trim();
         if (dto.Description != null)    product.Description    = dto.Description;
         if (dto.Price.HasValue)         product.Price          = dto.Price.Value;
         if (dto.DiscountPrice.HasValue) product.DiscountPrice  = dto.DiscountPrice.Value;
@@ -168,5 +170,10 @@ public class ProductService : IProductService
 
         variant.IsActive = false;
         await _repo.SaveChangesAsync();
+    }
+
+    private string GenerateProductCode()
+    {
+        return $"PRD-{Guid.NewGuid().ToString("N").Substring(0, 6).ToUpper()}";
     }
 }

@@ -10,6 +10,31 @@ public static class DbSeeder
 {
     public static void SeedData(ApplicationDbContext context)
     {
+        // Baseline existing migrations history if __EFMigrationsHistory is empty/missing
+        try
+        {
+            context.Database.ExecuteSqlRaw(@"
+                IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+                BEGIN
+                    CREATE TABLE [__EFMigrationsHistory] (
+                        [MigrationId] nvarchar(150) NOT NULL,
+                        [ProductVersion] nvarchar(32) NOT NULL,
+                        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+                    );
+                END;
+
+                IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = '20260620130003_InitialCreate')
+                    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES ('20260620130003_InitialCreate', '9.0.3');
+
+                IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = '20260621113938_UpdateSeedAndDecimal')
+                    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES ('20260621113938_UpdateSeedAndDecimal', '9.0.3');
+            ");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Warning: Baseline migration sync skipped or failed. " + ex.Message);
+        }
+
         // ── Ensure Admin User Is Updated ──────────────────────────────────────
         var seededAdmin = context.Set<ApplicationUser>().FirstOrDefault(u => u.Id == "seed-user-admin" || u.Email == "admin@yourchoice.com" || u.Email == "admin@yourstore.com");
         if (seededAdmin != null && (seededAdmin.Email != "admin@yourstore.com" || seededAdmin.PhoneNumber != "9999999999"))

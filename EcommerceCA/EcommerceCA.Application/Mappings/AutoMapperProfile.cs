@@ -59,7 +59,9 @@ public class AutoMapperProfile : Profile
 
         CreateMap<OrderItem, OrderItemResponseDto>()
             .ForMember(d => d.ProductImageUrl,
-                o => o.MapFrom(s => s.Product.ImageUrl));
+                o => o.MapFrom(s => s.Product.ImageUrl))
+            .ForMember(d => d.ProductCode,
+                o => o.MapFrom(s => s.Product != null ? s.Product.ProductCode : string.Empty));
 
         CreateMap<Address, AddressInOrderDto>();
 
